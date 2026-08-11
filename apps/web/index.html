@@ -1,14 +1,72 @@
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="generator" content="Hostinger Horizons" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title></title>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Título y descripción por defecto (se sobreescriben por página vía react-helmet,
+		     pero esto es lo que ven los crawlers que no ejecutan JavaScript y las vistas
+		     previas de WhatsApp/redes antes de que cargue React) -->
+	<title>AMOLI | Guacamole artesanal, real y honesto</title>
+	<meta name="description"
+		content="Guacamole 100% natural elaborado con aguacate Hass montañero de Antioquia, mediante un proceso artesanal, fresco y responsable. Sabores Limonudo y Picante." />
+	<link rel="canonical" href="https://amolisabores.com/" />
+	<meta name="robots" content="index, follow" />
+	<meta name="theme-color" content="#EF3608" />
+
+	<!-- Open Graph (vista previa al compartir en WhatsApp, Facebook, etc.) -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="AMOLI" />
+	<meta property="og:title" content="AMOLI | Guacamole artesanal, real y honesto" />
+	<meta property="og:description"
+		content="Guacamole 100% natural con aguacate Hass montañero de Antioquia. Sabores Limonudo y Picante." />
+	<meta property="og:url" content="https://amolisabores.com/" />
+	<meta property="og:image" content="https://amolisabores.com/og-image.jpg" />
+	<meta property="og:locale" content="es_CO" />
+
+	<!-- Twitter/X Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="AMOLI | Guacamole artesanal, real y honesto" />
+	<meta name="twitter:description" content="Guacamole 100% natural con aguacate Hass montañero de Antioquia." />
+	<meta name="twitter:image" content="https://amolisabores.com/og-image.jpg" />
+
+	<!-- Precarga de fuentes (más rápido que el @import dentro del CSS) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+	<!-- Datos estructurados (ayuda a Google a mostrar la marca correctamente) -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "AMOLI",
+			"url": "https://amolisabores.com/",
+			"logo": "https://amolisabores.com/logo.png",
+			"description": "Guacamole artesanal elaborado con aguacate Hass montañero de Antioquia.",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+57-300-290-2010",
+				"contactType": "customer service",
+				"areaServed": "CO"
+			}
+		}
+		</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-494MCYFSWX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-494MCYFSWX');
+	</script>
+</head>
+
+<body>
+	<div id="root"></div>
+	<script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

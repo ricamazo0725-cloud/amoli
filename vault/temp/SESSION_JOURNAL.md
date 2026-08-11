@@ -1873,3 +1873,42 @@
 ## 2026-08-11 18:00:18.831Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AMOLI🔥 Picante"}
 
+## 2026-08-11 18:48:00.299Z load
+- url: http://localhost:3000/
+
+## 2026-08-11 18:48:03.738Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-11 18:48:04.445Z load
+- url: http://localhost:3000/admin
+
+## 2026-08-11 18:48:05.090Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-11 19:01:29.902Z load
+- url: http://localhost:3000/admin
+
+## 2026-08-11 19:22:19.408Z load
+- url: http://localhost:3000/admin
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-11 19:22:20.254Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a0v9260983210za200zd9260983210&_p=1786476138555&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.76%7CChromium%3B151.0.7922.76&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119404701~119527020~119896802~120385423&sid=1786476139&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1836
+- status: 0
+- durationMs: 206
+
+## 2026-08-11 19:22:20.254Z console.error
+- text: Fetch error from : 
+
+## 2026-08-11 19:22:25.304Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a0v9260983210za200zd9260983210&_p=1786476138555&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=1&sr=1366x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.76%7CChromium%3B151.0.7922.76&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115616986~115938465~115938469~118395333~118897920~118897930~119367802~119367810~119404701~119527020~119896802~120385423&sid=1786476139&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&tfd=6997
+- status: 0
+- durationMs: 95
+
+## 2026-08-11 19:22:25.304Z console.error
+- text: Fetch error from : 
+
