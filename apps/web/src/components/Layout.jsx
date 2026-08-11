@@ -24,10 +24,16 @@ const Layout = ({ children }) => {
       <div className="bg-foreground text-background text-xs sm:text-sm overflow-hidden">
         <div className="flex w-[200%] ticker">
           {[0, 1].map((k) => (
-            <div key={k} className="flex w-1/2 shrink-0 items-center justify-around py-2 font-semibold uppercase tracking-wide">
-              <span className="flex items-center gap-2"><Leaf size={14} /> 100% aguacate Hass montañero de Antioquia</span>
-              <span className="flex items-center gap-2"><ShieldCheck size={14} /> Guacamole real, sin artificios</span>
-              <span className="flex items-center gap-2"><Truck size={14} /> Envío refrigerado a tu puerta</span>
+            <div key={k} className="flex w-1/2 shrink-0 items-center justify-around py-2 px-4 font-semibold uppercase tracking-wide gap-8">
+              <span className="flex items-center gap-2 whitespace-nowrap">
+                <Leaf size={14} className="shrink-0" /> 100% aguacate Hass montañero de Antioquia
+              </span>
+              <span className="flex items-center gap-2 whitespace-nowrap">
+                <ShieldCheck size={14} className="shrink-0" /> Guacamole real, sin artificios
+              </span>
+              <span className="flex items-center gap-2 whitespace-nowrap">
+                <Truck size={14} className="shrink-0" /> Envío refrigerado a tu puerta
+              </span>
             </div>
           ))}
         </div>
@@ -125,7 +131,7 @@ const Layout = ({ children }) => {
             <ul className="mt-3 space-y-2">
               <li><a href="/#productos" className="hover:text-primary">Productos (450g)</a></li>
               <li><a href="/#filosofia" className="hover:text-primary">Nuestra Filosofía</a></li>
-              <li><Link to="/aliados" className="hover:text-primary">Aliados B2B</Link></li>
+              <li><Link to="/aliados" className="hover:text-primary">Vende AMOLI</Link></li>
             </ul>
           </div>
           <div>
