@@ -31,7 +31,6 @@ import {
   sanitizePhone,
 } from '@/lib/validation';
 
-// Número de WhatsApp de la tienda para confirmar pedidos (formato internacional, solo dígitos).
 // Número de WhatsApp de AMOLI para confirmar pedidos.
 const STORE_WHATSAPP_NUMBER = '573002902010';
 
@@ -156,6 +155,7 @@ const CheckoutPage = () => {
     <>
       <Helmet>
         <title>Finalizar pedido | AMOLI</title>
+        <meta name="description" content="Confirma tu pedido de guacamole AMOLI: elige tus sabores, ingresa tus datos de entrega y coordina el pago." />
       </Helmet>
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-8">
         <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-6">

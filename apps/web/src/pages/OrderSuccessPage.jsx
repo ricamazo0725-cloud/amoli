@@ -12,6 +12,7 @@ const OrderSuccessPage = () => {
     <>
       <Helmet>
         <title>¡Pedido recibido! | AMOLI</title>
+        <meta name="description" content="Tu pedido de guacamole AMOLI fue recibido. Confirma por WhatsApp para coordinar el pago y la entrega." />
       </Helmet>
       <div className="mx-auto max-w-xl px-4 py-24 text-center sm:px-8">
         <CheckCircle className="mx-auto mb-6 h-16 w-16 text-primary" />

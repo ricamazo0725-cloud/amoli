@@ -3,129 +3,137 @@
 import fs from 'fs';
 import path from 'path';
 
-const CLEAN_CONTENT_REGEX = {
-	comments: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
-	templateLiterals: /`[\s\S]*?`/g,
-	strings: /'[^']*'|"[^"]*"/g,
-	jsxExpressions: /\{.*?\}/g,
-	htmlEntities: {
-		quot: /&quot;/g,
-		amp: /&amp;/g,
-		lt: /&lt;/g,
-		gt: /&gt;/g,
-		apos: /&apos;/g
-	}
+// ============================================================
+// Genera public/llms.txt a partir de las rutas PÚBLICAS reales
+// definidas en src/App.jsx (nunca incluye rutas /admin/*).
+//
+// Para cada ruta intenta obtener título/descripción, en este orden:
+//   1. Props inline en la propia ruta (title="…" description="…"),
+//      usado por páginas genéricas reutilizadas como CatalogPage.
+//   2. El <Helmet><title>…</title></Helmet> del archivo de esa página,
+//      si el título es texto fijo (no una variable de React).
+//   3. Un texto de respaldo legible, si el título depende de datos
+//      dinámicos (ej. el título de un producto o post específico).
+// ============================================================
+
+const SITE_NAME = 'AMOLI';
+const SITE_DESCRIPTION =
+	'Guacamole artesanal elaborado con aguacate Hass montañero de Antioquia, ' +
+	'mediante un proceso artesanal, fresco y responsable. Sabores Limonudo y Picante.';
+
+// Páginas con contenido dinámico (el <title> depende de datos que no existen
+// en tiempo de build) — les damos una descripción genérica pero útil.
+const DYNAMIC_FALLBACKS = {
+	ProductDetailPage: { title: 'Detalle de producto', description: 'Ficha de un producto del catálogo AMOLI, con precio, stock e imágenes.' },
+	BlogPostPage: { title: 'Artículo del blog', description: 'Un artículo del blog de AMOLI con recetas y tips de guacamole.' },
+	CatalogPage: { title: 'Productos', description: 'Catálogo completo de guacamole artesanal AMOLI: Limonudo y Picante.' },
 };
 
-const EXTRACTION_REGEX = {
-	route: /<Route\s+[^>]*>/g,
-	path: /path=["']([^"']+)["']/,
-	element: /element=\{<(\w+)[^}]*\/?\s*>\}/,
-	helmet: /<Helmet[^>]*?>([\s\S]*?)<\/Helmet>/i,
-	helmetTest: /<Helmet[\s\S]*?<\/Helmet>/i,
-	title: /<title[^>]*?>\s*(.*?)\s*<\/title>/i,
-	description: /<meta\s+name=["']description["']\s+content=["'](.*?)["']/i
-};
-
-function cleanContent(content) {
-	return content
-		.replace(CLEAN_CONTENT_REGEX.comments, '')
-		.replace(CLEAN_CONTENT_REGEX.templateLiterals, '""')
-		.replace(CLEAN_CONTENT_REGEX.strings, '""');
-}
-
-function cleanText(text) {
-	if (!text) return text;
-
-	return text
-		.replace(CLEAN_CONTENT_REGEX.jsxExpressions, '')
-		.replace(CLEAN_CONTENT_REGEX.htmlEntities.quot, '"')
-		.replace(CLEAN_CONTENT_REGEX.htmlEntities.amp, '&')
-		.replace(CLEAN_CONTENT_REGEX.htmlEntities.lt, '<')
-		.replace(CLEAN_CONTENT_REGEX.htmlEntities.gt, '>')
-		.replace(CLEAN_CONTENT_REGEX.htmlEntities.apos, "'")
-		.trim();
-}
-
-function extractRoutes(appJsxPath) {
-	if (!fs.existsSync(appJsxPath)) return new Map();
-
+function readFile(filePath) {
 	try {
-		const content = fs.readFileSync(appJsxPath, 'utf8');
-		const routes = new Map();
-		const routeMatches = [...content.matchAll(EXTRACTION_REGEX.route)];
-
-		for (const match of routeMatches) {
-			const routeTag = match[0];
-			const pathMatch = routeTag.match(EXTRACTION_REGEX.path);
-			const elementMatch = routeTag.match(EXTRACTION_REGEX.element);
-			const isIndex = routeTag.includes('index');
-
-			if (elementMatch) {
-				const componentName = elementMatch[1];
-				let routePath;
-
-				if (isIndex) {
-					routePath = '/';
-				} else if (pathMatch) {
-					routePath = pathMatch[1].startsWith('/') ? pathMatch[1] : `/${pathMatch[1]}`;
-				}
-
-				routes.set(componentName, routePath);
-			}
-		}
-
-		return routes;
-	} catch (error) {
-		return new Map();
-	}
-}
-
-function findReactFiles(dir) {
-	return fs.readdirSync(dir).map(item => path.join(dir, item));
-}
-
-function extractHelmetData(content, filePath, routes) {
-	const cleanedContent = cleanContent(content);
-
-	if (!EXTRACTION_REGEX.helmetTest.test(cleanedContent)) {
+		return fs.readFileSync(filePath, 'utf8');
+	} catch {
 		return null;
 	}
+}
 
-	const helmetMatch = content.match(EXTRACTION_REGEX.helmet);
+function extractRouteTags(appJsxContent) {
+	// Captura cada <Route ... /> (self-closing), sin importar el nivel de anidación.
+	return [...appJsxContent.matchAll(/<Route\s+[^>]*\/>/gs)].map((m) => m[0]);
+}
+
+function getAttr(tag, attrName) {
+	const match = tag.match(new RegExp(`${attrName}=["']([^"']*)["']`));
+	return match ? match[1] : null;
+}
+
+function getComponentName(tag) {
+	// Busca cualquier identificador que termine en "Page" dentro del tag,
+	// sin importar si está envuelto en <div>, <ProtectedRoute>, etc.
+	const match = tag.match(/(\w+Page)\b/);
+	return match ? match[1] : null;
+}
+
+function extractHelmetTitleAndDescription(pageFileContent) {
+	const helmetMatch = pageFileContent.match(/<Helmet[^>]*>([\s\S]*?)<\/Helmet>/i);
 	if (!helmetMatch) return null;
 
 	const helmetContent = helmetMatch[1];
-	const titleMatch = helmetContent.match(EXTRACTION_REGEX.title);
-	const descMatch = helmetContent.match(EXTRACTION_REGEX.description);
+	const titleMatch = helmetContent.match(/<title[^>]*>\s*(.*?)\s*<\/title>/is);
+	const descMatch = helmetContent.match(/<meta\s+name=["']description["']\s+content=["'](.*?)["']/is);
 
-	const title = cleanText(titleMatch?.[1]);
-	const description = cleanText(descMatch?.[1]);
+	const rawTitle = titleMatch?.[1]?.trim();
+	const rawDesc = descMatch?.[1]?.trim();
 
-	const fileName = path.basename(filePath, path.extname(filePath));
-	const url = routes.length && routes.has(fileName)
-		? routes.get(fileName)
-		: generateFallbackUrl(fileName);
+	// Si el título contiene una expresión de React (ej. {post.title}), no es texto fijo utilizable.
+	const titleIsDynamic = !rawTitle || rawTitle.includes('{');
+	const descIsDynamic = !rawDesc || rawDesc.includes('{');
 
 	return {
-		url,
-		title: title || 'Untitled Page',
-		description: description || 'No description available'
+		title: titleIsDynamic ? null : rawTitle,
+		description: descIsDynamic ? null : rawDesc,
 	};
 }
 
-function generateFallbackUrl(fileName) {
-	const cleanName = fileName.replace(/Page$/, '').toLowerCase();
-	return cleanName === 'app' ? '/' : `/${cleanName}`;
+function buildPageEntries() {
+	const appJsxPath = path.join(process.cwd(), 'src', 'App.jsx');
+	const pagesDir = path.join(process.cwd(), 'src', 'pages');
+
+	const appJsxContent = readFile(appJsxPath);
+	if (!appJsxContent) return [];
+
+	const routeTags = extractRouteTags(appJsxContent);
+	const seenUrls = new Set();
+	const entries = [];
+
+	for (const tag of routeTags) {
+		const routePath = getAttr(tag, 'path');
+		if (!routePath) continue;
+		if (routePath.startsWith('/admin')) continue; // nunca listamos el panel de administrador
+		if (routePath === '*') continue; // el wrapper de layout, no es una página real
+		if (seenUrls.has(routePath)) continue;
+
+		const componentName = getComponentName(tag);
+		let title = getAttr(tag, 'title');
+		let description = getAttr(tag, 'description');
+
+		if ((!title || !description) && componentName) {
+			const pageFilePath = path.join(pagesDir, `${componentName}.jsx`);
+			const pageFileContent = readFile(pageFilePath);
+			if (pageFileContent) {
+				const helmetData = extractHelmetTitleAndDescription(pageFileContent);
+				if (helmetData) {
+					title = title || helmetData.title;
+					description = description || helmetData.description;
+				}
+			}
+		}
+
+		if ((!title || !description) && componentName && DYNAMIC_FALLBACKS[componentName]) {
+			title = title || DYNAMIC_FALLBACKS[componentName].title;
+			description = description || DYNAMIC_FALLBACKS[componentName].description;
+		}
+
+		if (!title && !description) continue; // no logramos obtener info útil, mejor omitir
+
+		seenUrls.add(routePath);
+		entries.push({
+			url: routePath,
+			title: title || componentName || routePath,
+			description: description || 'Sin descripción disponible.',
+		});
+	}
+
+	return entries;
 }
 
 function generateLlmsTxt(pages) {
-	const sortedPages = pages.sort((a, b) => a.title.localeCompare(b.title));
-	const pageEntries = sortedPages.map(page =>
-		`- [${page.title}](${page.url}): ${page.description}`
-	).join('\n');
+	const sortedPages = [...pages].sort((a, b) => a.url.localeCompare(b.url));
+	const pageEntries = sortedPages
+		.map((page) => `- [${page.title}](${page.url}): ${page.description}`)
+		.join('\n');
 
-	return `## Pages\n${pageEntries}`;
+	return `# ${SITE_NAME}\n\n> ${SITE_DESCRIPTION}\n\n## Pages\n${pageEntries}\n`;
 }
 
 function ensureDirectoryExists(dirPath) {
@@ -134,45 +142,20 @@ function ensureDirectoryExists(dirPath) {
 	}
 }
 
-function processPageFile(filePath, routes) {
-	try {
-		const content = fs.readFileSync(filePath, 'utf8');
-		return extractHelmetData(content, filePath, routes);
-	} catch (error) {
-		console.error(`❌ Error processing ${filePath}:`, error.message);
-		return null;
-	}
-}
-
 function main() {
-	const pagesDir = path.join(process.cwd(), 'src', 'pages');
-	const appJsxPath = path.join(process.cwd(), 'src', 'App.jsx');
-
-	let pages = [];
-
-	if (!fs.existsSync(pagesDir)) {
-		pages.push(processPageFile(appJsxPath, []))
-		pages = pages.filter(Boolean);
-	} else {
-		const routes = extractRoutes(appJsxPath);
-		const reactFiles = findReactFiles(pagesDir);
-
-		pages = reactFiles
-			.map(filePath => processPageFile(filePath, routes))
-			.filter(Boolean);
-	}
+	const pages = buildPageEntries();
 
 	if (pages.length === 0) {
-		console.error('❌ No pages with Helmet components found!');
+		console.error('❌ No se encontraron rutas públicas para generar llms.txt');
 		process.exit(1);
 	}
-
 
 	const llmsTxtContent = generateLlmsTxt(pages);
 	const outputPath = path.join(process.cwd(), 'public', 'llms.txt');
 
 	ensureDirectoryExists(path.dirname(outputPath));
 	fs.writeFileSync(outputPath, llmsTxtContent, 'utf8');
+	console.log(`✅ llms.txt generado con ${pages.length} páginas públicas.`);
 }
 
 const isMainModule = import.meta.url === `file://${process.argv[1]}`;
@@ -180,3 +163,5 @@ const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
 	main();
 }
+
+export { buildPageEntries, generateLlmsTxt };
