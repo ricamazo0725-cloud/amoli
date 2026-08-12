@@ -137,9 +137,9 @@ const Layout = ({ children }) => {
           <div>
             <p className="font-display text-lg font-bold text-background">Envíos y pagos</p>
             <ul className="mt-3 space-y-2">
-              <li>Envío refrigerado en ciudades principales</li>
+              <li>Envío refrigerado</li>
               <li>Entrega 24-72 h</li>
-              <li>Transferencia bancaria y PSE</li>
+              <li>Transferencia bancaria</li>
             </ul>
           </div>
           <div>

@@ -32,9 +32,17 @@
 	<meta name="twitter:description" content="Guacamole 100% natural con aguacate Hass montañero de Antioquia." />
 	<meta name="twitter:image" content="https://amolisabores.com/og-image.jpg" />
 
-	<!-- Precarga de fuentes (más rápido que el @import dentro del CSS) -->
+	<!-- Fuentes: preconnect + carga no bloqueante (evita que el CSS de Google Fonts
+		     detenga el primer render de la página) -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preload" as="style"
+		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+		onload="this.onload=null;this.rel='stylesheet'" />
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" />
+	</noscript>
 
 	<!-- Datos estructurados (ayuda a Google a mostrar la marca correctamente) -->
 	<script type="application/ld+json">

@@ -483,7 +483,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
 
                 <div className="relative my-4 flex h-[280px] sm:h-[320px] items-center justify-center">
                   <img
-                    src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoligugacole.png"
+                    src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoligugacole.webp"
                     alt="Amoli Guacamole Artesanal"
                     className="h-full max-h-[300px] object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105"
                   />
@@ -546,7 +546,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                   className="relative overflow-hidden rounded-3xl shadow-2xl"
                 >
                   <img
-                    src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoliagucate.png"
+                    src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoliagucate.webp"
                     alt="Aguacate Hass Montañero AMOLI"
                     className="max-h-[340px] w-full object-cover rounded-3xl"
                   />
