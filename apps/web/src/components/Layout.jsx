@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       {/* BARRA SUPERIOR ANIMADA */}
       <div className="bg-foreground text-background text-xs sm:text-sm overflow-hidden">
-        <div className="flex w-[200%] ticker">
+        <div className="flex w-max ticker">
           {[0, 1].map((k) => (
-            <div key={k} className="flex w-1/2 shrink-0 items-center justify-around py-2 px-4 font-semibold uppercase tracking-wide gap-8">
+            <div key={k} className="flex w-max shrink-0 items-center py-2 px-4 font-semibold uppercase tracking-wide gap-8 pr-8">
               <span className="flex items-center gap-2 whitespace-nowrap">
                 <Leaf size={14} className="shrink-0" /> 100% aguacate Hass montañero de Antioquia
               </span>
@@ -131,7 +131,7 @@ const Layout = ({ children }) => {
             <ul className="mt-3 space-y-2">
               <li><a href="/#productos" className="hover:text-primary">Productos (450g)</a></li>
               <li><a href="/#filosofia" className="hover:text-primary">Nuestra Filosofía</a></li>
-              <li><Link to="/aliados" className="hover:text-primary">Vende AMOLI</Link></li>
+              <li><Link to="/aliados" className="hover:text-primary">Aliados B2B</Link></li>
             </ul>
           </div>
           <div>
