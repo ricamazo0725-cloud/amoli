@@ -1912,3 +1912,194 @@
 ## 2026-08-11 19:22:25.304Z console.error
 - text: Fetch error from : 
 
+## 2026-08-12 01:48:39.450Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-12 01:48:40.001Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499319077&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=10&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.76%7CChromium%3B151.0.7922.76&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~119381663~119527019~119896803&sid=1786499319&sct=3&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ss=1&_ee=1&tfd=14695
+- status: 0
+- durationMs: 258
+
+## 2026-08-12 01:48:40.001Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:48:44.859Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499319077&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=10&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.76%7CChromium%3B151.0.7922.76&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115616985~115938465~115938468~118897920~118897930~119367802~119367810~119381663~119527019~119896803&sid=1786499319&sct=3&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=16&tfd=19722
+- status: 0
+- durationMs: 92
+
+## 2026-08-12 01:48:44.860Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:19.449Z load
+- url: http://192.168.40.9:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-12 01:50:19.995Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499418804&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1077752495.1786499420&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&ul=en-us&_s=1&tag_exp=115616985~115938466~115938468~118395334~118897920~118897930~119367802~119367810~119404703~119527020~119896803&sid=1786499419&sct=1&seg=0&dl=http%3A%2F%2F192.168.40.9%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=3588
+- status: 0
+- durationMs: 344
+
+## 2026-08-12 01:50:19.995Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:22.007Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-12 01:50:22.059Z navigate
+- url: http://192.168.40.9:3000/
+- via: replaceState
+
+## 2026-08-12 01:50:24.767Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499418804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1077752495.1786499420&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&ul=en-us&_s=2&tag_exp=115616985~115938466~115938468~118395334~118897920~118897930~119367802~119367810~119404703~119527020~119896803&sid=1786499419&sct=1&seg=0&dl=http%3A%2F%2F192.168.40.9%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=14&tfd=8612
+- status: 0
+- durationMs: 94
+
+## 2026-08-12 01:50:24.767Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:26.038Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-12 01:50:28.013Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499421798&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.76%7CChromium%3B151.0.7922.76&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119404702~119527019~119896803~120125304~120315584&sid=1786499319&sct=3&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&tfd=20915
+- status: 0
+- durationMs: 174
+
+## 2026-08-12 01:50:28.014Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:32.340Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-12 01:50:34.234Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AMOLI🍋 Limonudo"}
+
+## 2026-08-12 01:50:34.889Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-12 01:50:35.609Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito2"}
+
+## 2026-08-12 01:50:37.177Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Quitar"}
+
+## 2026-08-12 01:50:39.126Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-12 01:50:39.709Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-12 01:50:39.710Z navigate
+- url: http://192.168.40.9:3000/checkout
+- via: pushState
+
+## 2026-08-12 01:50:41.665Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-12 01:50:41.749Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-12 01:50:43.725Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"ricardo","valueLength":7,"text":""}
+
+## 2026-08-12 01:50:43.737Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"ricardo","valueLength":7,"text":""}
+
+## 2026-08-12 01:50:43.761Z focus
+- element: {"tag":"select","role":null,"ariaLabel":"Phone number country","name":null,"type":null,"id":null,"placeholder":null,"label":"Phone number country","value":"CO","valueLength":2,"text":"AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth KoreaSouth SudanSpainSri LankaSudanSurinameSvalbard a..."}
+
+## 2026-08-12 01:50:43.854Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499418804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1077752495.1786499420&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&ul=en-us&_s=3&tag_exp=115616985~115938466~115938468~118395334~118897920~118897930~119367802~119367810~119404703~119527020~119896803&dl=http%3A%2F%2F192.168.40.9%3A3000%2Fcheckout&dr=http%3A%2F%2F192.168.40.9%3A3000%2F&sid=1786499419&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=19319&tfd=27674
+- status: 0
+- durationMs: 119
+
+## 2026-08-12 01:50:43.854Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:45.456Z blur
+- element: {"tag":"select","role":null,"ariaLabel":"Phone number country","name":null,"type":null,"id":null,"placeholder":null,"label":"Phone number country","value":"CO","valueLength":2,"text":"AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth KoreaSouth SudanSpainSri LankaSudanSurinameSvalbard a..."}
+
+## 2026-08-12 01:50:45.467Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-12 01:50:45.544Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-12 01:50:48.757Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7008878","valueLength":15,"text":""}
+
+## 2026-08-12 01:50:48.758Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7008878","valueLength":15,"text":""}
+
+## 2026-08-12 01:50:48.785Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo (opcional)","value":"","valueLength":0,"text":""}
+
+## 2026-08-12 01:50:48.833Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499418804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=1077752495.1786499420&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&ul=en-us&_s=4&tag_exp=115616985~115938466~115938468~118395334~118897920~118897930~119367802~119367810~119404703~119527020~119896803&sid=1786499419&sct=1&seg=1&dl=http%3A%2F%2F192.168.40.9%2Fcheckout&dr=http%3A%2F%2F192.168.40.9%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2F192.168.40.9%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=name&epn.first_field_position=1&_et=3004&tfd=32684
+- status: 0
+- durationMs: 88
+
+## 2026-08-12 01:50:48.833Z console.error
+- text: Fetch error from : 
+
+## 2026-08-12 01:50:50.174Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ciudad *Selecciona tu ciudadMedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-12 01:50:50.533Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n  import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n  \n\n\t\n\t\n\t\n\n\t\n\tFinalizar pedido | AMOLI\n\t\n\t\n\t\n\t\n\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\n\t\n\t\n\t\n\t\n\t\n\n\t\n\t\n\t\n\t\n\t\n\t\t<link rel=\"stylesheet\"\n\t\t\thref=\"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap\" />\n\t\n\n\t\n\t\n\t\t{\n\t\t\t\"@context\": \"https://schema.org\",\n\t\t\t\"@type\": \"Organization\",\n\t\t\t\"name\": \"AMOLI\",\n\t\t\t\"url\": \"https://amolisabores.com/\",\n\t\t\t\"logo\": \"https://amolisabores.com/logo.png\",\n\t\t\t\"description\": \"Guacamole artesanal elaborado con aguacate Hass montañero de Antioquia.\",\n\t\t\t\"contactPoint\": {\n\t\t\t\t\"@type\": \"ContactPoint\",\n\t\t\t\t\"telephone\": \"+57-300-290-2010\",\n\t\t\t\t\"contactType\": \"customer service\",\n\t\t\t\t\"areaServed\": \"CO\"\n\t\t\t}\n\t\t}\n\t\t\n\n\t\n\t\n\t\n\t\twindow.dataLayer = window.dataLayer || [];\n\t\tfunction gtag() { dataLayer.push(arguments); }\n\t\tgtag('js', new Date());\n\t\tgtag('config', 'G-494MCYFSWX');\n\t\n  const SITE_PAGES_ENDPOINT = '/__horizons/site-pages';\n\nconst OUTGOING_SITE_PAGES_MESSAGE = 'sitePages';\nconst INCOMING_REQUEST_SITE_PAGES_MESSAGE = 'request-site-pages';\n\nconst ALLOWED_PARENT_ORIGINS = [\n\t'https://horizons.hostinger.com',\n\t'https://horizons.hostinger.dev',\n\t'https://horizons-frontend-local.hostinger.dev',\n\t'http://localhost:4000',\n];\n\nfunction postSitePages(pages) {\n\tlet parentOrigin = window.location.ancestorOrigins?.[0];\n\tif (!parentOrigin && document.referrer) {\n\t\ttry {\n\t\t\tparentOrigin = new URL(document.referrer).origin;\n\t\t} catch {}\n\t}\n\tif (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {\n\t\twindow.parent.postMessage({ type: OUTGOING_SITE_PAGES_MESSAGE, payload: { pages } }, parentOrigin);\n\t}\n}\n\nasync function sendSitePagesToParent() {\n\tif (window.self === window.top) {\n\t\treturn;\n\t}\n\n\ttry {\n\t\tconst response = await fetch(SITE_PAGES_ENDPOINT);\n\t\tif (!response.ok) {\n\t\t\tthrow new Error(`HTTP ${response.status}`);\n\t\t}\n\t\tpost..."}
+
+## 2026-08-12 01:50:51.596Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Bogotá","valueLength":6,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-12 01:50:51.601Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Bogotá"}
+
+## 2026-08-12 01:50:52.417Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-12 01:50:52.458Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-12 01:50:57.599Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 454 45","valueLength":15,"text":""}
+
+## 2026-08-12 01:50:57.600Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 454 45","valueLength":15,"text":""}
+
+## 2026-08-12 01:50:57.718Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-12 01:50:57.726Z submit
+- action: http://192.168.40.9:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"ricardo","length":7,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 7008878","length":15,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Bogotá","length":6,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"calle 45 454 45","length":15,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-12 01:50:59.051Z navigate
+- url: http://192.168.40.9:3000/success
+- via: pushState
+
+## 2026-08-12 01:51:01.272Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Confirmar por WhatsApp"}
+
+## 2026-08-12 01:51:05.394Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68a1v9260983210za200zd9260983210&_p=1786499418804&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1077752495.1786499420&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&ul=en-us&tag_exp=115616985~115938466~115938468~118395334~118897920~118897930~119367802~119367810~119404703~119527020~119896803&dl=http%3A%2F%2F192.168.40.9%3A3000%2Fsuccess&dr=http%3A%2F%2F192.168.40.9%3A3000%2Fcheckout&sid=1786499419&sct=1&seg=1&dt=%C2%A1Pedido%20recibido!%20%7C%20AMOLI&_s=5&tfd=49246
+- status: 0
+- requestBody: 
+    en=page_view&_et=16320
+    en=click&ep.link_id=&ep.link_classes=&ep.link_url=https%3A%2F%2Fwa.me%2F573002902010%3Ftext%3DHola%252C%2520quiero%2520confirmar%2520mi%2520pedido%2520%25238cb3866a%253A%250A%25E2%2580%25A2%25201%2520x%2520Guacamole%2520AMOLI%2520Picante%2520450g%2520%25E2%2580%2594%2520%2524%25C2%25A023.900%250ATotal%253A%2520%2524%25C2%25A023.900%250ANombre%253A%2520ricardo%250ACiudad%253A%2520Bogot%25C3%25A1%250ADirecci%25C3%25B3n%253A%2520calle%252045%2520454%252045&ep.link_domain=wa.me&ep.outbound=true&_et=1214&dl=http%3A%2F%2F192.168.40.9%2Fsuccess
+- durationMs: 87
+
+## 2026-08-12 01:51:05.395Z console.error
+- text: Fetch error from : 
+
