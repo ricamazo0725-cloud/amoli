@@ -51,6 +51,7 @@
   # Si conectas otro dominio nuevo (otro Supabase, otro webhook de n8n,
   # otra fuente de imágenes), agrégalo en connect-src o img-src, si no,
   # el navegador lo bloqueará silenciosamente.
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.supabase.in; frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
+  # NOTA: el hash de script-src corresponde EXACTO al script de gtag.js en
+  # index.html. Si cambias ese bloque de código, hay que recalcular el hash.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-/54xvssgJMN9I72+Ws9z99RHG2X2op9hMddmSLNTrlI='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.supabase.in; frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
 </IfModule>
-
