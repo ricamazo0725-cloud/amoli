@@ -11,23 +11,29 @@ body {
 @layer base {
   :root {
     /* Paleta de marca AMOLI — ver BRAND_AMOLI.pdf */
-    --background: 36 33% 97%;        /* #FAF8F5 — crema cálido */
-    --foreground: 0 0% 16%;          /* #2A2A2A — "Neutro" */
-    --card: 33 27% 94%;              /* #F3EFEA — "cardBg" */
+    --background: 36 33% 97%;
+    /* #FAF8F5 — crema cálido */
+    --foreground: 0 0% 16%;
+    /* #2A2A2A — "Neutro" */
+    --card: 33 27% 94%;
+    /* #F3EFEA — "cardBg" */
     --card-foreground: 0 0% 16%;
     --popover: 36 33% 97%;
     --popover-foreground: 0 0% 16%;
-    --primary: 12 94% 48%;           /* #EF3608 — "Picante" */
+    --primary: 12 94% 48%;
+    /* #EF3608 — "Picante" */
     --primary-foreground: 0 0% 100%;
     --secondary: 33 27% 94%;
     --secondary-foreground: 0 0% 16%;
     --muted: 33 20% 90%;
     --muted-foreground: 0 0% 40%;
-    --accent: 77 91% 62%;            /* #C3F647 — "Limonudo" */
+    --accent: 77 91% 62%;
+    /* #C3F647 — "Limonudo" */
     --accent-foreground: 0 0% 16%;
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 16%;              /* bordes marcados en negro/neutro, como el packaging */
+    --border: 0 0% 16%;
+    /* bordes marcados en negro/neutro, como el packaging */
     --input: 33 15% 80%;
     --ring: 12 94% 48%;
     --radius: 0.75rem;
@@ -40,23 +46,35 @@ body {
     letter-spacing: 0.03em;
     transform: scaleY(1.05);
   }
+
   .font-heading {
     font-family: "Space Grotesk", "Inter", sans-serif;
   }
+
   .glass-card {
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(42, 42, 42, 0.08);
     backdrop-filter: blur(10px);
   }
+
   .ticker {
     animation: ticker 26s linear infinite;
   }
+
   @keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
+
   @media (prefers-reduced-motion: reduce) {
-    .ticker { animation: none; }
+    .ticker {
+      animation: none;
+    }
   }
 }
 
@@ -70,18 +88,22 @@ body {
   background-color: hsl(var(--background));
   padding: 0 0.5rem;
 }
+
 .phone-input-wrapper:focus-within {
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow: 0 0 0 2px hsl(var(--ring));
 }
+
 .phone-input-wrapper .PhoneInputCountry {
   margin-right: 0.5rem;
 }
+
 .phone-input-wrapper .PhoneInputCountrySelect {
   background: transparent;
   color: hsl(var(--foreground));
 }
+
 .phone-input-wrapper .PhoneInputInput {
   flex: 1;
   background: transparent;
@@ -91,9 +113,35 @@ body {
   font-size: 0.875rem;
   height: 100%;
 }
+
 .phone-input-wrapper .PhoneInputInput::placeholder {
   color: hsl(var(--muted-foreground));
 }
+
 .phone-input-wrapper.phone-input-error {
   border-color: hsl(var(--destructive));
+}
+
+.pac-container {
+  z-index: 99999 !important;
+  background-color: #ffffff !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: calc(var(--radius) - 2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+  font-family: inherit !important;
+  margin-top: 4px !important;
+}
+
+.pac-item {
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  font-size: 0.875rem !important;
+}
+
+.pac-item:hover {
+  background-color: hsl(var(--accent)) !important;
+}
+
+.pac-matched {
+  font-weight: 600 !important;
 }

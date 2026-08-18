@@ -53,5 +53,9 @@
   # el navegador lo bloqueará silenciosamente.
   # NOTA: el hash de script-src corresponde EXACTO al script de gtag.js en
   # index.html. Si cambias ese bloque de código, hay que recalcular el hash.
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-/54xvssgJMN9I72+Ws9z99RHG2X2op9hMddmSLNTrlI='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.supabase.in; frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
+  # NOTA: se agregó maps.googleapis.com/maps.gstatic.com para el autocompletado
+  # de direcciones (Google Places) en el checkout. Ese script inyecta sus
+  # propios <script> internos por eso necesita 'unsafe-inline' además del hash
+  # de gtag.js (Google no publica un hash fijo para su librería de Places).
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-/54xvssgJMN9I72+Ws9z99RHG2X2op9hMddmSLNTrlI=' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.supabase.in https://maps.googleapis.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
 </IfModule>

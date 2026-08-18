@@ -1,11 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';
-import { Loader2, ArrowLeft } from 'lucide-react';
+import { Loader2, ArrowLeft, MapPin } from 'lucide-react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { useCart } from '@/hooks/useCart';
 import { useToast } from '@/hooks/use-toast';
+import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
 import { createManualOrder } from '@/api/orders';
 import { formatCOP, getProductsByIds } from '@/api/products';
 import { Button } from '@/components/ui/button';
@@ -48,6 +49,36 @@ const CheckoutPage = () => {
   const handleChange = (field) => (e) => setCustomer((c) => ({ ...c, [field]: e.target.value }));
   const handleBlur = (field) => () => setTouched((t) => ({ ...t, [field]: true }));
 
+  // Autocompletado de direcciones con Google Places
+  const addressInputRef = useRef(null);
+  const { loadError: mapsLoadError } = usePlacesAutocomplete(addressInputRef, {
+    onPlaceSelected: (place) => {
+      const addressVal = place.formatted_address || '';
+      if (addressInputRef.current) {
+        addressInputRef.current.value = addressVal;
+      }
+      setCustomer((c) => ({ ...c, address: addressVal }));
+      setTouched((t) => ({ ...t, address: true }));
+      runFieldValidation('address', addressVal);
+
+      const detectedCity = getCityFromPlace(place);
+      if (detectedCity) {
+        const normalizeText = (str) =>
+          str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+
+        const match = CITY_OPTIONS.find(
+          (opt) => normalizeText(opt) === normalizeText(detectedCity)
+        );
+
+        if (match) {
+          setCustomer((c) => ({ ...c, city: match }));
+          setTouched((t) => ({ ...t, city: true }));
+          runFieldValidation('city', match);
+        }
+      }
+    },
+  });
+
   const validators = useMemo(() => ({
     name: validateName,
     phone: validatePhone,
@@ -58,9 +89,13 @@ const CheckoutPage = () => {
   }), []);
 
   const validateAll = () => {
+    // Aseguramos capturar el valor actual del input de dirección nativo antes de validar
+    const currentAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
+    const currentCustomer = { ...customer, address: currentAddress };
+
     const nextErrors = {};
     Object.entries(validators).forEach(([field, validate]) => {
-      const message = validate(customer[field]);
+      const message = validate(currentCustomer[field]);
       if (message) nextErrors[field] = message;
     });
     setErrors(nextErrors);
@@ -74,6 +109,7 @@ const CheckoutPage = () => {
   };
 
   const buildWhatsappMessage = (order) => {
+    const finalAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
     const lines = [
       `Hola, quiero confirmar mi pedido #${order.id.slice(0, 8)}:`,
       ...cartItems.map(
@@ -82,7 +118,7 @@ const CheckoutPage = () => {
       `Total: ${formatCOP(getCartTotalValue())}`,
       `Nombre: ${customer.name}`,
       customer.city ? `Ciudad: ${customer.city}` : null,
-      customer.address ? `Dirección: ${customer.address}` : null,
+      finalAddress ? `Dirección: ${finalAddress}` : null,
     ].filter(Boolean);
     return encodeURIComponent(lines.join('\n'));
   };
@@ -100,9 +136,6 @@ const CheckoutPage = () => {
 
     setSubmitting(true);
     try {
-      // Revalidamos el carrito contra la base de datos: si algún producto fue
-      // eliminado o desactivado desde que se agregó al carrito, lo sacamos
-      // antes de intentar crear el pedido (evita el error de llave foránea).
       const currentIds = cartItems.map((item) => item.product.id);
       const stillValidProducts = await getProductsByIds(currentIds);
       const validIds = new Set(stillValidProducts.map((p) => p.id));
@@ -119,7 +152,8 @@ const CheckoutPage = () => {
         return;
       }
 
-      const sanitizedCustomer = { ...customer, phone: sanitizePhone(customer.phone) };
+      const finalAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
+      const sanitizedCustomer = { ...customer, address: finalAddress, phone: sanitizePhone(customer.phone) };
       const order = await createManualOrder({
         customer: sanitizedCustomer,
         items: cartItems.map((item) => ({
@@ -271,21 +305,31 @@ const CheckoutPage = () => {
 
           <div className="space-y-2">
             <Label htmlFor="address">Dirección de entrega *</Label>
-            <Input
-              id="address"
-              value={customer.address}
-              placeholder="Ej. Calle 10 # 43-20, apto 301"
-              onChange={(e) => {
-                handleChange('address')(e);
-                if (touched.address) runFieldValidation('address', e.target.value);
-              }}
-              onBlur={(e) => {
-                handleBlur('address')();
-                runFieldValidation('address', e.target.value);
-              }}
-              aria-invalid={!!errors.address}
-            />
+            <div className="relative">
+              <MapPin size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              <input
+                id="address"
+                ref={addressInputRef}
+                placeholder="Ej. Calle 10 # 43-20, apto 301"
+                autoComplete="off"
+                className="flex h-10 w-full rounded-sm border border-input bg-background px-3 py-2 pl-9 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                onChange={(e) => {
+                  setCustomer((c) => ({ ...c, address: e.target.value }));
+                  if (touched.address) runFieldValidation('address', e.target.value);
+                }}
+                onBlur={(e) => {
+                  handleBlur('address')();
+                  runFieldValidation('address', e.target.value);
+                }}
+                aria-invalid={!!errors.address}
+              />
+            </div>
             {touched.address && errors.address && <p className="text-xs text-destructive">{errors.address}</p>}
+            {mapsLoadError && (
+              <p className="text-xs text-muted-foreground">
+                Escribe la dirección manualmente (el autocompletado no está disponible ahora).
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">

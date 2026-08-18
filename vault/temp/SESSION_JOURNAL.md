@@ -2291,3 +2291,1621 @@
 ## 2026-08-13 22:58:24.442Z console.error
 - text: Fetch error from : 
 
+## 2026-08-18 16:11:48.866Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:11:48.868Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:11:53.616Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069507459&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1951251906.1787069508&frm=0&ngs=1&pscdl=noapi&rcb=0&sr=1360x768&uaa=x86&uab=64&uafvl=Not%252FA)Brand%3B99.0.0.0%7CChromium%3B148.0.7778.280&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115616985~115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&tfd=38507
+- status: 0
+- durationMs: 91
+
+## 2026-08-18 16:11:53.617Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:11:54.704Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069507399&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&tfd=32537
+- status: 0
+- durationMs: 86
+
+## 2026-08-18 16:11:54.705Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:11:56.226Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-18 16:11:56.240Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-18 16:13:05.223Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-18 16:13:06.566Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:13:09.425Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:13:10.017Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:13:10.018Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:13:11.129Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:13:11.420Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:13:12.284Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:13:12.385Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:13:13.863Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:13.887Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:13.897Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:13:14.057Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069507399&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787069508&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=10397&tfd=111802
+- status: 0
+- durationMs: 173
+
+## 2026-08-18 16:13:14.058Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:13:18.976Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069507399&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=4&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=2827&tfd=116809
+- status: 0
+- durationMs: 84
+
+## 2026-08-18 16:13:18.976Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:13:24.965Z load
+- url: http://localhost:3000/checkout
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:13:25.875Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:13:25.952Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:13:26.571Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:13:26.636Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:13:27.634Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:27.659Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:27.664Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:13:27.732Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069604654&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115616985~115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423~120412527&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=29&tfd=3395
+- status: 0
+- durationMs: 77
+
+## 2026-08-18 16:13:27.733Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:13:32.749Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069604654&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115616985~115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423~120412527&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=2720&tfd=8409
+- status: 0
+- durationMs: 80
+
+## 2026-08-18 16:13:32.749Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:13:36.605Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:13:41.440Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Medellín","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:13:41.445Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Medellín"}
+
+## 2026-08-18 16:13:43.470Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:13:44.482Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:13:44.489Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:13:49.345Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:49.463Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:50.528Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:51.643Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:13:51.741Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Nombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth KoreaSouth Suda..."}
+
+## 2026-08-18 16:14:05.692Z load
+- url: http://localhost:3000/checkout
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:14:06.375Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:14:06.462Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:14:09.509Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:14:09.598Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:14:10.744Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069645469&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=14&tfd=5503
+- status: 0
+- durationMs: 97
+
+## 2026-08-18 16:14:10.744Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:14:13.158Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"c","valueLength":1,"text":""}
+
+## 2026-08-18 16:14:13.176Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"c","valueLength":1,"text":""}
+
+## 2026-08-18 16:14:13.184Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:14:18.275Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787069645469&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938465~115938468~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=7523&tfd=13035
+- status: 0
+- durationMs: 95
+
+## 2026-08-18 16:14:18.275Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:26:57.951Z console.error
+- text: 
+    Warning: A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components%s 
+        at input
+        at _c (http://localhost:3000/src/components/ui/input.jsx:4:40)
+        at div
+        at div
+        at form
+        at div
+        at CheckoutPage (http://localhost:3000/src/pages/CheckoutPage.jsx?t=1787070415170:40:85)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:7572:3)
+        at main
+        at div
+        at Layout (http://localhost:3000/src/components/Layout.jsx:14:19)
+        at RenderedRoute (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:6647:26)
+        at Routes (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:7572:3)
+        at CartProvider (http://localhost:3000/src/hooks/useCart.jsx:12:32)
+        at AuthProvider (http://localhost:3000/src/hooks/useAuth.jsx:11:32)
+        at Router (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:7511:13)
+        at BrowserRouter (http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=0e0d893f:10816:3)
+        at App
+
+## 2026-08-18 16:27:00.449Z load
+- url: http://localhost:3000/checkout
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:27:00.928Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ee=1&tfd=1209
+- status: 0
+- durationMs: 100
+
+## 2026-08-18 16:27:00.929Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:27:01.884Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:27:02.087Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:27:02.704Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:27:02.825Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:27:03.453Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"d","valueLength":1,"text":""}
+
+## 2026-08-18 16:27:03.476Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"d","valueLength":1,"text":""}
+
+## 2026-08-18 16:27:03.510Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:27:03.567Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=28&tfd=3855
+- status: 0
+- durationMs: 94
+
+## 2026-08-18 16:27:03.567Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:27:07.434Z navigate
+- url: http://localhost:3000/
+- via: popstate
+
+## 2026-08-18 16:27:08.567Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=2636&tfd=8848
+- status: 0
+- durationMs: 102
+
+## 2026-08-18 16:27:08.568Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:27:12.363Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:27:13.540Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Total$ 23.900Continuar con el pedido"}
+
+## 2026-08-18 16:27:13.560Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=4&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_et=4977&tfd=13856
+- status: 0
+- durationMs: 87
+
+## 2026-08-18 16:27:13.560Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:27:13.974Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:27:13.976Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:27:15.768Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:27:15.856Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:27:20.108Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=5&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787069508&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=6516&tfd=20386
+- status: 0
+- durationMs: 104
+
+## 2026-08-18 16:27:20.108Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:27:27.386Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:27.389Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:27.441Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:27:28.935Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:27:28.942Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:27:30.256Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:30.407Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:30.882Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:31.144Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:31.496Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:50.354Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:27:50.360Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:30:47.613Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:30:49.183Z navigate
+- url: http://localhost:3000/
+- via: popstate
+
+## 2026-08-18 16:30:49.211Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:30:52.088Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:30:53.443Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:30:53.445Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:30:55.394Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&_s=6&tfd=235607
+- status: 0
+- requestBody: 
+    en=page_view&_et=38081
+    en=page_view&_et=4236&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI
+- durationMs: 165
+
+## 2026-08-18 16:30:55.395Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:30:55.989Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:30:59.269Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:30:59.274Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:31:00.195Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:31:00.330Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:31:09.440Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46","valueLength":10,"text":""}
+
+## 2026-08-18 16:31:09.445Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46","valueLength":10,"text":""}
+
+## 2026-08-18 16:31:12.148Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46","valueLength":10,"text":""}
+
+## 2026-08-18 16:31:17.081Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46","valueLength":10,"text":""}
+
+## 2026-08-18 16:32:13.198Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46","valueLength":10,"text":""}
+
+## 2026-08-18 16:32:16.256Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46ffd","valueLength":13,"text":""}
+
+## 2026-08-18 16:32:16.258Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46ffd","valueLength":13,"text":""}
+
+## 2026-08-18 16:32:16.277Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:32:16.364Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:32:17.355Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:18.803Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:18.868Z click
+- element: {"tag":"form","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tus datosNombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth KoreaS..."}
+
+## 2026-08-18 16:32:20.288Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:20.373Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:21.636Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:21.698Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:32:21.712Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"","length":0,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 778845","length":14,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"carrera 46ffd","length":13,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:32:22.824Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:32:22.925Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:32:24.439Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"dfdffd","valueLength":6,"text":""}
+
+## 2026-08-18 16:32:24.441Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"dfdffd","valueLength":6,"text":""}
+
+## 2026-08-18 16:32:24.503Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:32:24.510Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"dfdffd","length":6,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 778845","length":14,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"carrera 46ffd","length":13,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:32:27.186Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:27.280Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:27.583Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:30.925Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:31.753Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 778845","valueLength":14,"text":""}
+
+## 2026-08-18 16:32:33.915Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7788454","valueLength":15,"text":""}
+
+## 2026-08-18 16:32:33.918Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7788454","valueLength":15,"text":""}
+
+## 2026-08-18 16:32:33.979Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:32:33.988Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"dfdffd","length":6,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 7788454","length":15,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"carrera 46ffd","length":13,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:32:35.122Z navigate
+- url: http://localhost:3000/success
+- via: pushState
+
+## 2026-08-18 16:32:41.330Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=7&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=%C2%A1Pedido%20recibido!%20%7C%20AMOLI&en=page_view&_et=43030&tfd=341536
+- status: 0
+- durationMs: 171
+
+## 2026-08-18 16:32:41.330Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:37:21.046Z console.error
+- text: [vite] Failed to reload /src/pages/CheckoutPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+
+## 2026-08-18 16:37:21.048Z console.error
+- text: [vite] Failed to reload /src/pages/CheckoutPage.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+
+## 2026-08-18 16:37:32.971Z navigate
+- url: http://localhost:3000/checkout
+- via: popstate
+
+## 2026-08-18 16:37:39.179Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787070420037&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=8&tag_exp=115938466~115938469~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&sid=1787069508&sct=1&seg=1&dt=%C2%A1Pedido%20recibido!%20%7C%20AMOLI&en=page_view&_et=3965&tfd=639374
+- status: 0
+- durationMs: 177
+
+## 2026-08-18 16:37:39.180Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:37:39.720Z click
+- element: {"tag":"vite-error-overlay","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:38:29.772Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Productos"}
+
+## 2026-08-18 16:38:30.814Z load
+- url: http://localhost:3000/#productos
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:38:31.066Z navigate
+- url: http://localhost:3000/#productos
+- via: replaceState
+
+## 2026-08-18 16:38:34.495Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-18 16:38:35.416Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:38:35.889Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787071110045&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=19&tfd=6023
+- status: 0
+- durationMs: 85
+
+## 2026-08-18 16:38:35.890Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:38:37.511Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:38:38.199Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:38:38.201Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:38:39.103Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:38:39.279Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:38:40.336Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:38:40.441Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:38:42.715Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:38:42.732Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"cal","valueLength":3,"text":""}
+
+## 2026-08-18 16:38:42.738Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:38:42.819Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787071110045&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787069508&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=8481&tfd=12949
+- status: 0
+- durationMs: 90
+
+## 2026-08-18 16:38:42.820Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:38:45.359Z click
+- element: {"tag":"body","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"\n\t 100% aguacate Hass montañero de Antioquia Guacamole real, sin artificios Envío refrigerado a tu puerta 100% aguacate Hass montañero de Antioquia Guacamole real, sin artificios Envío refrigerado a tu puertaAMOLIProductosNuestra FilosofíaVende AMOLIContacto Carrito1 Seguir comprandoFinalizar pedidoPago manual: te confirmamos el pedido y coordinamos el pago por transferencia o WhatsApp.Resumen del pedido1 x Guacamole AMOLI Picante 450g$ 23.900Total$ 23.900Tus datosNombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthe..."}
+
+## 2026-08-18 16:38:45.782Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:38:46.215Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:38:47.835Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68e1v9260983210za200zd9260983210&_p=1787071110045&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=15&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=4&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=3444&tfd=17963
+- status: 0
+- durationMs: 92
+
+## 2026-08-18 16:38:47.835Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:38:49.548Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:38:49.555Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:40:32.739Z load
+- url: http://localhost:3000/checkout
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:40:33.387Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ee=1&_et=1&tfd=1097
+- status: 0
+- durationMs: 156
+
+## 2026-08-18 16:40:33.388Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:40:34.075Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:40:34.139Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:40:34.663Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:40:34.778Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:40:36.544Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);-webkit-background-size:34px 34px;background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}sentinel{}\n\n  import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n  \n\n\t\n\t\n\t\n\n\t\n\tFinaliza..."}
+
+## 2026-08-18 16:40:38.190Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);-webkit-background-size:34px 34px;background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}sentinel{}\n\n  import { injectIntoGlobalHook } from \"/@react-refresh\";\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () => {};\nwindow.$RefreshSig$ = () => (type) => type;\n\n  \n\n\t\n\t\n\t\n\n\t\n\tFinaliza..."}
+
+## 2026-08-18 16:40:38.323Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=32&tfd=6100
+- status: 0
+- durationMs: 90
+
+## 2026-08-18 16:40:38.324Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:40:38.779Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:40:38.884Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:40:40.281Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:40:40.303Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:40:40.307Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:40:45.391Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=7059&tfd=13176
+- status: 0
+- durationMs: 81
+
+## 2026-08-18 16:40:45.392Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:41:48.171Z navigate
+- url: http://localhost:3000/#productos
+- via: popstate
+
+## 2026-08-18 16:41:50.568Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:41:51.927Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:41:51.929Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:41:53.939Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:41:54.059Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:41:54.590Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&_s=4&tfd=82273
+- status: 0
+- requestBody: 
+    en=page_view&_et=10121
+    en=page_view&_et=3564&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI
+- durationMs: 181
+
+## 2026-08-18 16:41:54.590Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:42:00.357Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:42:00.670Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:42:00.903Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:42:01.445Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46","valueLength":8,"text":""}
+
+## 2026-08-18 16:42:04.659Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:04.662Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:04.688Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":"notes","placeholder":null,"label":"Notas adicionales","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:42:05.810Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:05.897Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:07.202Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:07.582Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:07.837Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:08.101Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:09.569Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:12.310Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:14.320Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:42:14.704Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:47:23.096Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:47:23.707Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071642773&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=2&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787071643&sct=6&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ss=1&_ee=1&tfd=1013
+- status: 0
+- durationMs: 205
+
+## 2026-08-18 16:47:23.708Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:47:23.969Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-18 16:47:28.628Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071642773&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=2&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787071643&sct=6&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=20&tfd=6050
+- status: 0
+- durationMs: 89
+
+## 2026-08-18 16:47:28.628Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:47:43.532Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-18 16:47:44.411Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-18 16:47:46.342Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:47:46.957Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:47:46.958Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:47:47.885Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:47:48.121Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:47:48.794Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:47:48.904Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:47:50.586Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"c","valueLength":1,"text":""}
+
+## 2026-08-18 16:47:50.603Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"c","valueLength":1,"text":""}
+
+## 2026-08-18 16:47:50.609Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:47:50.677Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071642773&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=2&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=3&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787071643&sct=6&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=13297&tfd=28112
+- status: 0
+- durationMs: 77
+
+## 2026-08-18 16:47:50.677Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:47:55.691Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071642773&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=2&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=4&tag_exp=115616985~115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385423&sid=1787071643&sct=6&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=2476&tfd=33121
+- status: 0
+- durationMs: 82
+
+## 2026-08-18 16:47:55.691Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:48:05.203Z load
+- url: http://localhost:3000/checkout
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:48:05.721Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:48:05.829Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:48:06.946Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:48:07.032Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:48:07.568Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:48:07.591Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:48:07.596Z console.error
+- text: 
+    Google Maps JavaScript API error: RefererNotAllowedMapError
+    https://developers.google.com/maps/documentation/javascript/error-messages#referer-not-allowed-map-error
+    Your site URL to be authorized: http://localhost:3000/checkout
+
+## 2026-08-18 16:48:07.668Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071685086&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119381664~120213116~120385423&sid=1787071643&sct=6&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=8&tfd=3797
+- status: 0
+- durationMs: 82
+
+## 2026-08-18 16:48:07.669Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:48:12.677Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071685086&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=3&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~119381664~120213116~120385423&sid=1787071643&sct=6&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=2378&tfd=8810
+- status: 0
+- durationMs: 78
+
+## 2026-08-18 16:48:12.677Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:48:56.509Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:48:56.609Z navigate
+- url: http://localhost:3000/#productos
+- via: popstate
+
+## 2026-08-18 16:48:56.696Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 46 45","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:00.001Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-18 16:49:01.035Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito2"}
+
+## 2026-08-18 16:49:02.570Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:49:02.893Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=5&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_et=21078&tfd=510568
+- status: 0
+- durationMs: 182
+
+## 2026-08-18 16:49:02.893Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:49:03.255Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:49:03.257Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:49:05.323Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:49:05.435Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:49:09.388Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=6&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787069508&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=6571&tfd=517154
+- status: 0
+- durationMs: 93
+
+## 2026-08-18 16:49:09.388Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:49:09.842Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:09.845Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:09.916Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Notas adicionales0/300"}
+
+## 2026-08-18 16:49:10.404Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:10.517Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:10.849Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:12.554Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:13.118Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:13.650Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsd","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:16.037Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:16.042Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:31.817Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:31.824Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:31.956Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:49:31.995Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:49:33.903Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:49:33.929Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:33.989Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dirección de entrega *"}
+
+## 2026-08-18 16:49:34.734Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:35.004Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"casssdsdsas","valueLength":11,"text":""}
+
+## 2026-08-18 16:49:39.418Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:39.420Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:39.460Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:49:40.891Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:49:40.897Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:49:41.789Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:41.902Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:49:43.322Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:01.837Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:01.852Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:01.955Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Dirección de entrega *Escribe la dirección completa (mínimo 8 caracteres)."}
+
+## 2026-08-18 16:50:02.517Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:02.630Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:03.423Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:03.671Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:03.927Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera ","valueLength":8,"text":""}
+
+## 2026-08-18 16:50:08.602Z navigate
+- url: http://localhost:3000/#productos
+- via: popstate
+
+## 2026-08-18 16:50:08.642Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:50:08.645Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"ca","valueLength":2,"text":""}
+
+## 2026-08-18 16:50:10.294Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito2"}
+
+## 2026-08-18 16:50:11.743Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:50:11.744Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:50:14.876Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&_s=7&tfd=582560
+- status: 0
+- requestBody: 
+    en=page_view&_et=31317
+    en=page_view&_et=3064&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI
+- durationMs: 174
+
+## 2026-08-18 16:50:14.876Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:50:45.975Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Seguir comprandoFinalizar pedidoPago manual: te confirmamos el pedido y coordinamos el pago por transferencia o WhatsApp.Resumen del pedido2 x Guacamole AMOLI Picante 450g$ 47.800Total$ 47.800Tus datosNombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint..."}
+
+## 2026-08-18 16:50:51.115Z navigate
+- url: http://localhost:3000/#productos
+- via: popstate
+
+## 2026-08-18 16:50:53.206Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito2"}
+
+## 2026-08-18 16:50:54.440Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:50:54.441Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:50:56.385Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:50:56.488Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:50:57.323Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&_s=8&tfd=625003
+- status: 0
+- requestBody: 
+    en=page_view&_et=4821
+    en=page_view&_et=3314&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI
+- durationMs: 178
+
+## 2026-08-18 16:50:57.324Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:51:03.982Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:51:04.419Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:51:04.421Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:51:04.489Z click
+- element: {"tag":"form","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Tus datosNombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint MaartenSlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth KoreaS..."}
+
+## 2026-08-18 16:51:05.625Z click
+- element: {"tag":"html","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":".gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}\n.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;-webkit-box-shadow:0 2px 6px rgba(0,0,0,.3);box-shadow:0 2px 6px rgba(0,0,0,.3);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:\"\";padding:1px 1px 1px 0;height:18px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:100%;background-repeat:no-repeat;-webkit-background-size:120px 14px;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#515151}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://m..."}
+
+## 2026-08-18 16:51:06.626Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:51:06.632Z click
+- element: {"tag":"div","role":"option","ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Envigado"}
+
+## 2026-08-18 16:51:07.857Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:51:07.866Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"","length":0,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57","length":3,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"calle 45 45 45","length":14,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:54:52.816Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:54:52.821Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:54:53.425Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:54:53.691Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:54:53.946Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 45 45 45","valueLength":14,"text":""}
+
+## 2026-08-18 16:55:03.624Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 54","valueLength":8,"text":""}
+
+## 2026-08-18 16:55:03.630Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"calle 54","valueLength":8,"text":""}
+
+## 2026-08-18 16:55:09.333Z navigate
+- url: http://localhost:3000/#productos
+- via: popstate
+
+## 2026-08-18 16:55:15.578Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787071232467&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=11&sr=400x546&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=9&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_et=30001&tfd=883252
+- status: 0
+- durationMs: 178
+
+## 2026-08-18 16:55:15.579Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:55:39.898Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 16:55:40.389Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787072139429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=400x546&uaa=&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=Pixel%209&uamb=1&uap=Android&uapv=15&uaw=0&ul=es-419&_s=1&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119793974~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ee=1&tfd=1418
+- status: 0
+- durationMs: 88
+
+## 2026-08-18 16:55:40.390Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:55:40.752Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-18 16:55:45.397Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787072139429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=400x546&uaa=&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=Pixel%209&uamb=1&uap=Android&uapv=15&uaw=0&ul=es-419&_s=2&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119793974~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=25&tfd=6426
+- status: 0
+- durationMs: 89
+
+## 2026-08-18 16:55:45.397Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:56:02.620Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Menú","name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-18 16:56:03.791Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito2"}
+
+## 2026-08-18 16:56:05.658Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-18 16:56:05.660Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-18 16:56:06.810Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-18 16:56:06.924Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-18 16:56:11.778Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787072139429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=400x546&uaa=&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=Pixel%209&uamb=1&uap=Android&uapv=15&uaw=0&ul=es-419&_s=3&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119793974~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787069508&sct=1&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=12615&tfd=32805
+- status: 0
+- durationMs: 91
+
+## 2026-08-18 16:56:11.778Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:56:21.215Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:56:21.221Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:56:38.559Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a 38","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:38.585Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a 38","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:38.790Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-18 16:56:43.766Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787072139429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=400x546&uaa=&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=Pixel%209&uamb=1&uap=Android&uapv=15&uaw=0&ul=es-419&_s=4&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119793974~120213116~120385423&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=31887&tfd=64701
+- status: 0
+- durationMs: 181
+
+## 2026-08-18 16:56:43.766Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 16:56:47.045Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:56:47.064Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-18 16:56:48.829Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7788454","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:51.335Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 31077884544","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:51.338Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 31077884544","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:51.364Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:56:51.367Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:56:52.618Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"esteban mazo","valueLength":12,"text":""}
+
+## 2026-08-18 16:56:52.622Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"esteban mazo","valueLength":12,"text":""}
+
+## 2026-08-18 16:56:52.622Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo (opcional)","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 16:56:52.667Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo (opcional)","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 16:56:52.670Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo (opcional)","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 16:56:52.670Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"esteban mazo","valueLength":12,"text":""}
+
+## 2026-08-18 16:56:54.899Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"esteban mazo","valueLength":12,"text":""}
+
+## 2026-08-18 16:56:54.921Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:56:54.938Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"esteban mazo","length":12,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 31077884544","length":15,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"ricamazo0725@gmail.com","length":22,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"Cra. 46A #38b Sur-1, Zona 8, Envigado, Antioquia","length":48,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:56:58.322Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 31077884544","valueLength":15,"text":""}
+
+## 2026-08-18 16:56:58.334Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 31077884544","valueLength":15,"text":""}
+
+## 2026-08-18 16:57:01.936Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7788454","valueLength":15,"text":""}
+
+## 2026-08-18 16:57:01.963Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Seguir comprandoFinalizar pedidoPago manual: te confirmamos el pedido y coordinamos el pago por transferencia o WhatsApp.Resumen del pedido2 x Guacamole AMOLI Picante 450g$ 47.800Total$ 47.800Tus datosNombre completo *Teléfono / WhatsApp *AfghanistanÅland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntigua and BarbudaArgentinaArmeniaArubaAscension IslandAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBrazilBritish Indian Ocean TerritoryBrunei DarussalamBulgariaBurkina FasoBurundiCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCongo, Democratic Republic of theCook IslandsCosta RicaCote d'IvoireCroatiaCubaCuraçaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland IslandsFaroe IslandsFederated States of MicronesiaFijiFinlandFranceFrench GuianaFrench PolynesiaGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHoly See (Vatican City State)HondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorth MacedoniaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthélemySaint HelenaSaint Kitts and NevisSaint LuciaSaint Martin (French Part)Saint Pierre and MiquelonSaint..."}
+
+## 2026-08-18 16:57:02.503Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-18 16:57:02.517Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"esteban mazo","length":12,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 7788454","length":15,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"ricamazo0725@gmail.com","length":22,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"Cra. 46A #38b Sur-1, Zona 8, Envigado, Antioquia","length":48,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 16:57:03.247Z navigate
+- url: http://localhost:3000/success
+- via: pushState
+
+## 2026-08-18 16:57:09.361Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787072139429&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=19&sr=400x546&uaa=&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=Pixel%209&uamb=1&uap=Android&uapv=15&uaw=0&ul=es-419&_s=5&tag_exp=115616986~115938466~115938469~118897920~118897930~119367802~119367810~119793974~120213116~120385423&dl=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787069508&sct=1&seg=1&dt=%C2%A1Pedido%20recibido!%20%7C%20AMOLI&en=page_view&_et=25671&tfd=90392
+- status: 0
+- durationMs: 86
+
+## 2026-08-18 16:57:09.361Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:10:36.106Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"¡Gracias por tu pedido!Pedido #712ee29aRegistramos tu pedido con estado pendiente. Para confirmarlo y coordinar el pago, escríbenos por WhatsApp con el resumen que ya preparamos. Confirmar por WhatsAppSeguir comprando"}
+
+## 2026-08-18 17:11:17.441Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Productos"}
+
+## 2026-08-18 17:11:17.848Z load
+- url: http://localhost:3000/#productos
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 17:11:18.555Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073077653&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=1&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422~120412527&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=page_view&_ee=1&tfd=966
+- status: 0
+- durationMs: 144
+
+## 2026-08-18 17:11:18.556Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:11:18.567Z navigate
+- url: http://localhost:3000/#productos
+- via: replaceState
+
+## 2026-08-18 17:11:23.512Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073077653&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=3&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422~120412527&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2F&dr=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=14&tfd=5977
+- status: 0
+- durationMs: 91
+
+## 2026-08-18 17:11:23.512Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:11:26.865Z load
+- url: http://localhost:3000/admin/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-18 17:11:27.097Z navigate
+- url: http://localhost:3000/admin/
+- via: replaceState
+
+## 2026-08-18 17:11:27.125Z navigate
+- url: http://localhost:3000/admin/login
+- via: replaceState
+
+## 2026-08-18 17:11:31.902Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073086679&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&_s=2&tfd=5319
+- status: 0
+- requestBody: 
+    en=scroll&epn.percent_scrolled=90&_et=22
+    en=page_view&_et=1339&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&dt=Admin%20%C2%B7%20Iniciar%20sesi%C3%B3n
+- durationMs: 93
+
+## 2026-08-18 17:11:31.902Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:12:32.097Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:32.208Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:33.204Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:12:33.586Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:12:33.587Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:33.666Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:34.008Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:34.642Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:35.559Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:12:35.663Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:12:37.254Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:12:37.255Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:37.334Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:12:38.388Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073086679&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422&sid=1787069508&sct=1&seg=1&dl=http%3A%2F%2Flocalhost%2Fadmin%2Flogin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2F&dt=Admin%20%C2%B7%20Iniciar%20sesi%C3%B3n&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&epn.form_length=3&ep.first_field_id=email&ep.first_field_type=email&epn.first_field_position=1&_et=65058&tfd=71738
+- status: 0
+- durationMs: 161
+
+## 2026-08-18 17:12:38.389Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:13:22.305Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=0]","valueLength":0,"text":""}
+
+## 2026-08-18 17:13:23.846Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:13:23.847Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:13:23.959Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Iniciar sesión"}
+
+## 2026-08-18 17:13:23.960Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"Correo","type":"email","value":"ricamazo0725@gmail.com","length":22,"redacted":false},{"label":"Contraseña","type":"password","value":"[redacted:length=18]","length":18,"redacted":true},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 17:13:24.680Z network.error
+- method: POST
+- url: https://kkygujzfiiyvpjqbkkvg.supabase.co/auth/v1/token?grant_type=password
+- status: 400
+- requestBody: {"email":"ricamazo0725@gmail.com","password":"[redacted:length=18]","gotrue_meta_security":{}}
+- response: {"code":"invalid_credentials","message":"Invalid login credentials"}
+- durationMs: 719
+
+## 2026-08-18 17:13:24.681Z console.error
+- text: Fetch error from https://kkygujzfiiyvpjqbkkvg.supabase.co/auth/v1/token?grant_type=password: {"code":"invalid_credentials","message":"Invalid login credentials"}
+
+## 2026-08-18 17:16:08.763Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:08.836Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:11.190Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:11.429Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:21.669Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:51.630Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:52.728Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:52.729Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:16:52.805Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:16:53.019Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:16:53.249Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"ricamazo0725@gmail.com","valueLength":22,"text":""}
+
+## 2026-08-18 17:16:54.459Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"rmazov3@gmail.com","valueLength":17,"text":""}
+
+## 2026-08-18 17:16:54.462Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"email","id":"email","placeholder":null,"label":"Correo","value":"rmazov3@gmail.com","valueLength":17,"text":""}
+
+## 2026-08-18 17:16:54.462Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:54.539Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:54.769Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:16:54.904Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:17:02.381Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:17:02.434Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:17:02.650Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:17:03.693Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"password","id":"password","placeholder":null,"label":"Contraseña","value":"[redacted:length=18]","valueLength":18,"text":""}
+
+## 2026-08-18 17:17:03.701Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Panel de administradorGestiona los productos de la tiendaCorreoContraseñaIniciar sesión"}
+
+## 2026-08-18 17:17:04.266Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Iniciar sesión"}
+
+## 2026-08-18 17:17:04.267Z submit
+- action: http://localhost:3000/admin/login
+- fields: [{"label":"Correo","type":"email","value":"rmazov3@gmail.com","length":17,"redacted":false},{"label":"Contraseña","type":"password","value":"[redacted:length=18]","length":18,"redacted":true},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-18 17:17:05.052Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-18 17:17:05.067Z navigate
+- url: http://localhost:3000/admin
+- via: replaceState
+
+## 2026-08-18 17:17:10.915Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Pedidos"}
+
+## 2026-08-18 17:17:10.916Z navigate
+- url: http://localhost:3000/admin/orders
+- via: pushState
+
+## 2026-08-18 17:17:11.263Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073086679&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=4&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Flogin&sid=1787069508&sct=1&seg=1&dt=Admin%20%C2%B7%20Productos&en=page_view&_et=40177&tfd=344598
+- status: 0
+- durationMs: 173
+
+## 2026-08-18 17:17:11.264Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:17:12.977Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"esteban mazo#712ee29a · 18/08/2026, 11:57 a. m.$ 47.800pendiente"}
+
+## 2026-08-18 17:17:16.347Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"dfdffd#fa12fef3 · 18/08/2026, 11:32 a. m.$ 23.900pendiente"}
+
+## 2026-08-18 17:17:17.017Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68h0v9260983210za200zd9260983210&_p=1787073086679&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=5&tag_exp=115938466~115938468~118897920~118897930~119367802~119367810~120213116~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Forders&dr=http%3A%2F%2Flocalhost%3A3000%2Fadmin&sid=1787069508&sct=1&seg=1&dt=Admin%20%C2%B7%20Pedidos&en=page_view&_et=5467&tfd=350446
+- status: 0
+- durationMs: 79
+
+## 2026-08-18 17:17:17.018Z console.error
+- text: Fetch error from : 
+
+## 2026-08-18 17:17:18.739Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"esteban mazo#712ee29a · 18/08/2026, 11:57 a. m.$ 47.800pendiente"}
+
