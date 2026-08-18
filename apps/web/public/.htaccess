@@ -1,6 +1,6 @@
-# Redirige todas las rutas que no sean archivos reales hacia index.html,
-# para que React Router (/admin, /checkout, /product/:id, etc.) funcione
-# incluso al recargar la página o entrar directo por URL.
+# ============================================================
+# Enrutamiento de React Router (SPA)
+# ============================================================
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -9,11 +9,13 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
 
-  # Si no, entrega index.html y deja que React Router decida qué mostrar
-  RewriteRule ^index.html [L]
+  # Si no, entrega index.html para que React Router tome el control de la ruta
+  RewriteRule ^(.*)$ /index.html [L]
 </IfModule>
 
-# Cache básico para archivos estáticos compilados
+# ============================================================
+# Cache básico para archivos estáticos
+# ============================================================
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 year"
@@ -28,34 +30,25 @@
 # Encabezados de seguridad HTTP
 # ============================================================
 <IfModule mod_headers.c>
-  # Evita que el sitio se cargue dentro de un <iframe> ajeno (clickjacking)
+  # Evita clickjacking
   Header always set X-Frame-Options "SAMEORIGIN"
-
-  # Evita que el navegador "adivine" el tipo de archivo (protege contra XSS)
+  
+  # Protege contra XSS adivinando tipos de archivo
   Header always set X-Content-Type-Options "nosniff"
-
-  # No envía la URL completa como referrer a otros sitios
+  
+  # Referrer policy estricta
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Fuerza HTTPS en el navegador durante 2 años (quita esto si aún dudas de tu SSL)
+  
+  # Fuerza HTTPS
   Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-
-  # Aísla el sitio de otras pestañas/ventanas (protege contra ciertos ataques de canal lateral)
+  
+  # Opener policy
   Header always set Cross-Origin-Opener-Policy "same-origin"
-
-  # Desactiva permisos del navegador que este sitio no usa
+  
+  # Desactiva permisos no usados
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
-  # Política de Seguridad de Contenido (CSP): limita de dónde puede cargar
-  # scripts, estilos, imágenes y llamadas de red este sitio.
-  # Si conectas otro dominio nuevo (otro Supabase, otro webhook de n8n,
-  # otra fuente de imágenes), agrégalo en connect-src o img-src, si no,
-  # el navegador lo bloqueará silenciosamente.
-  # NOTA: el hash de script-src corresponde EXACTO al script de gtag.js en
-  # index.html. Si cambias ese bloque de código, hay que recalcular el hash.
-  # NOTA: se agregó maps.googleapis.com/maps.gstatic.com para el autocompletado
-  # de direcciones (Google Places) en el checkout. Ese script inyecta sus
-  # propios <script> internos por eso necesita 'unsafe-inline' además del hash
-  # de gtag.js (Google no publica un hash fijo para su librería de Places).
+  # Política de Seguridad de Contenido (CSP)
+  # Incluye Google Maps/Places y Supabase
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'sha256-/54xvssgJMN9I72+Ws9z99RHG2X2op9hMddmSLNTrlI=' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co https://*.supabase.in https://maps.googleapis.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'"
 </IfModule>
