@@ -10,7 +10,7 @@
   RewriteCond %{REQUEST_FILENAME} !-d
 
   # Si no, entrega index.html y deja que React Router decida qué mostrar
-  RewriteRule ^ index.html [L]
+  RewriteRule ^index.html [L]
 </IfModule>
 
 # Cache básico para archivos estáticos compilados
