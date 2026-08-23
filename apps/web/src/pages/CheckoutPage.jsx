@@ -7,6 +7,7 @@ import 'react-phone-number-input/style.css';
 import { useCart } from '@/hooks/useCart';
 import { useToast } from '@/hooks/use-toast';
 import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
+import { AddressMapPicker } from '@/components/AddressMapPicker';
 import { createManualOrder } from '@/api/orders';
 import { formatCOP, getProductsByIds } from '@/api/products';
 import { Button } from '@/components/ui/button';
@@ -45,6 +46,9 @@ const CheckoutPage = () => {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  // Coordenadas exactas de la dirección de entrega, capturadas del
+  // autocompletado y ajustables arrastrando el pin en el mapa.
+  const [coords, setCoords] = useState(null); // { lat, lng }
 
   const handleChange = (field) => (e) => setCustomer((c) => ({ ...c, [field]: e.target.value }));
   const handleBlur = (field) => () => setTouched((t) => ({ ...t, [field]: true }));
@@ -60,6 +64,11 @@ const CheckoutPage = () => {
       setCustomer((c) => ({ ...c, address: addressVal }));
       setTouched((t) => ({ ...t, address: true }));
       runFieldValidation('address', addressVal);
+
+      const location = place.geometry?.location;
+      if (location) {
+        setCoords({ lat: location.lat(), lng: location.lng() });
+      }
 
       const detectedCity = getCityFromPlace(place);
       if (detectedCity) {
@@ -153,7 +162,13 @@ const CheckoutPage = () => {
       }
 
       const finalAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
-      const sanitizedCustomer = { ...customer, address: finalAddress, phone: sanitizePhone(customer.phone) };
+      const sanitizedCustomer = {
+        ...customer,
+        address: finalAddress,
+        phone: sanitizePhone(customer.phone),
+        lat: coords?.lat ?? null,
+        lng: coords?.lng ?? null,
+      };
       const order = await createManualOrder({
         customer: sanitizedCustomer,
         items: cartItems.map((item) => ({
@@ -329,6 +344,19 @@ const CheckoutPage = () => {
               <p className="text-xs text-muted-foreground">
                 Escribe la dirección manualmente (el autocompletado no está disponible ahora).
               </p>
+            )}
+            {coords && (
+              <AddressMapPicker
+                lat={coords.lat}
+                lng={coords.lng}
+                onPinMove={({ lat, lng, address }) => {
+                  setCoords({ lat, lng });
+                  if (address) {
+                    if (addressInputRef.current) addressInputRef.current.value = address;
+                    setCustomer((c) => ({ ...c, address }));
+                  }
+                }}
+              />
             )}
           </div>
 
