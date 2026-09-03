@@ -10,7 +10,9 @@ export async function generateMetadata({ params }) {
     const post = await getPostBySlug(params.slug);
     if (!post) return {};
     return {
-      title: `${post.title} | Blog AMOLI`,
+      // Sin sufijo aqui: el layout raiz ya aplica title.template
+      // ('%s | AMOLI'). Repetirlo duplica la marca (ver product/[id]/page.js).
+      title: post.title,
       description: post.excerpt || undefined,
       alternates: { canonical: `/blog/${params.slug}` },
       openGraph: {

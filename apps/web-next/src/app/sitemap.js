@@ -3,6 +3,14 @@ import { getPosts } from '@/api/posts';
 
 const BASE_URL = 'https://amolisabores.com';
 
+// Sin esto, Next.js genera el sitemap UNA sola vez durante el build y lo
+// congela ahi. Si el entorno de build no tiene salida a internet hacia
+// Supabase (pasa en Hostinger), el catch de abajo calla el error y el
+// sitemap queda solo con las rutas estaticas para siempre, sin
+// productos ni posts nuevos. force-dynamic lo recalcula en cada visita,
+// igual que /, /productos, etc.
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap() {
   const staticRoutes = [
     { url: `${BASE_URL}/`, priority: 1.0, changeFrequency: 'daily' },

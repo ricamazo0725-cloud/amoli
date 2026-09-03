@@ -9,7 +9,9 @@ export async function generateMetadata({ params }) {
     const product = await getProduct(params.id);
     if (!product) return {};
     return {
-      title: `${product.title} - AMOLI`,
+      // Sin sufijo de marca aqui: el layout raiz ya aplica
+      // title.template ('%s | AMOLI'). Repetirlo duplica la marca.
+      title: product.title,
       description: product.description?.substring(0, 160) || product.title,
       alternates: { canonical: `/product/${params.id}` },
       openGraph: {
