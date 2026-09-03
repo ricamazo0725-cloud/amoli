@@ -2,8 +2,8 @@
 // que puedas automatizar cosas ahí: confirmación por WhatsApp, alertas de
 // stock bajo, notificaciones internas, sincronizar con un CRM, etc.
 //
-// Configura la URL de tu webhook en apps/web/.env:
-//   VITE_N8N_WEBHOOK_URL=https://tu-n8n.tudominio.com/webhook/pedidos
+// Configura la URL de tu webhook en apps/web-next/.env:
+//   NEXT_PUBLIC_N8N_WEBHOOK_URL=https://tu-n8n.tudominio.com/webhook/pedidos
 //
 // Si no está configurada, esta función simplemente no hace nada (no rompe
 // el checkout). Si el webhook falla (n8n caído, URL mala, etc.), tampoco
@@ -23,7 +23,7 @@ const N8N_WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
 export async function notifyN8nNewOrder({ order, customer, items, total }) {
   if (!N8N_WEBHOOK_URL) {
     // eslint-disable-next-line no-console
-    console.warn('VITE_N8N_WEBHOOK_URL no está configurada — no se notificó a n8n.');
+    console.warn('NEXT_PUBLIC_N8N_WEBHOOK_URL no está configurada — no se notificó a n8n.');
     return;
   }
 

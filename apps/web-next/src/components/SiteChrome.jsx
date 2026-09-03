@@ -77,6 +77,7 @@ const SiteChrome = ({ children }) => {
             <button
               onClick={() => setIsCartOpen(true)}
               className="relative flex h-11 min-w-[44px] items-center gap-2 rounded-full bg-foreground px-4 font-display font-bold tracking-wide text-background transition active:scale-[0.98]"
+              aria-label={`Carrito de compras${count > 0 ? \` (\${count} producto\${count === 1 ? '' : 's'})\` : ''}`}
             >
               <CartIcon size={18} /> <span className="hidden sm:inline">Carrito</span>
               {count > 0 && (
