@@ -3909,3 +3909,212 @@
 ## 2026-08-18 17:17:18.739Z click
 - element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"esteban mazo#712ee29a · 18/08/2026, 11:57 a. m.$ 47.800pendiente"}
 
+## 2026-08-23 17:07:54.244Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-23 17:07:58.817Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787504872908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385423~120474863&sid=1787504873&sct=8&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=31&tfd=32161
+- status: 0
+- durationMs: 85
+
+## 2026-08-23 17:07:58.818Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:08:00.633Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-23 17:08:04.316Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-23 17:08:05.825Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-23 17:08:05.827Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-23 17:08:06.738Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-23 17:08:07.009Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-23 17:08:08.359Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:08:08.463Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:08:12.081Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787504872908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=3&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385423~120474863&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787504873&sct=8&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=13273&tfd=45442
+- status: 0
+- durationMs: 70
+
+## 2026-08-23 17:08:12.081Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:08:27.208Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a n 38 b sur 12","valueLength":26,"text":""}
+
+## 2026-08-23 17:08:27.255Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a n 38 b sur 12","valueLength":26,"text":""}
+
+## 2026-08-23 17:08:27.287Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":"notes","placeholder":null,"label":"Notas adicionales","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:08:27.448Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-23 17:08:27.472Z console.warn
+- text: As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+
+## 2026-08-23 17:08:32.352Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787504872908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=4&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385423~120474863&sid=1787504873&sct=8&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=20239&tfd=65697
+- status: 0
+- durationMs: 86
+
+## 2026-08-23 17:08:32.352Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:08:47.242Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-23 17:08:49.762Z click
+- element: {"tag":"area","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-23 17:08:52.904Z click
+- element: {"tag":"area","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-23 17:08:59.083Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-23 17:08:59.154Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57","valueLength":3,"text":""}
+
+## 2026-08-23 17:09:04.041Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7008854","valueLength":15,"text":""}
+
+## 2026-08-23 17:09:04.043Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"tel","id":"phone","placeholder":null,"label":"Teléfono / WhatsApp *","value":"+57 310 7008854","valueLength":15,"text":""}
+
+## 2026-08-23 17:09:04.063Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:09:04.104Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:09:09.868Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"ricardomazo","valueLength":11,"text":""}
+
+## 2026-08-23 17:09:09.870Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"name","placeholder":null,"label":"Nombre completo *","value":"ricardomazo","valueLength":11,"text":""}
+
+## 2026-08-23 17:09:09.928Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confirmar pedido"}
+
+## 2026-08-23 17:09:09.933Z submit
+- action: http://localhost:3000/checkout
+- fields: [{"label":"Nombre completo *","type":"text","value":"ricardomazo","length":11,"redacted":false},{"label":"Phone number country","type":"select-one","value":"CO","length":2,"redacted":false},{"label":"Teléfono / WhatsApp *","type":"tel","value":"+57 310 7008854","length":15,"redacted":false},{"label":"Correo (opcional)","type":"email","value":"","length":0,"redacted":false},{"label":"Ciudad *","type":"button","value":"","length":0,"redacted":false},{"label":"[select]","type":"select-one","value":"Envigado","length":8,"redacted":false},{"label":"Dirección de entrega *","type":"text","value":"Cl. 38b Sur #46-5, Zona 8, Envigado, Antioquia, Colombia","length":56,"redacted":false},{"label":"Combinaciones de teclas","type":"button","value":"","length":0,"redacted":false},{"label":"Cambiar a la vista en pantalla completa","type":"button","value":"","length":0,"redacted":false},{"label":"Ampliar","type":"button","value":"","length":0,"redacted":false},{"label":"Reducir","type":"button","value":"","length":0,"redacted":false},{"label":"Combinaciones de teclas","type":"button","value":"","length":0,"redacted":false},{"label":"Datos del mapa","type":"button","value":"","length":0,"redacted":false},{"label":"Escala del mapa: 200 m por 42 píxeles","type":"button","value":"","length":0,"redacted":false},{"label":"Notas adicionales","type":"textarea","value":"","length":0,"redacted":false},{"label":"[submit]","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-23 17:09:11.350Z navigate
+- url: http://localhost:3000/success
+- via: pushState
+
+## 2026-08-23 17:09:17.583Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787504872908&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=359046859.1786476140&frm=0&ngs=1&pscdl=noapi&rcb=12&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&_s=5&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385423~120474863&dl=http%3A%2F%2Flocalhost%3A3000%2Fsuccess&dr=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&sid=1787504873&sct=8&seg=1&dt=%C2%A1Pedido%20recibido!%20%7C%20AMOLI&en=page_view&_et=45117&tfd=110813
+- status: 0
+- durationMs: 202
+
+## 2026-08-23 17:09:17.584Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:15:13.304Z load
+- url: http://localhost:3000/
+- title: AMOLI | Guacamole artesanal, real y honesto
+
+## 2026-08-23 17:15:15.382Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-23 17:15:16.461Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787505310428&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=2&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385422&sid=1787505311&sct=2&seg=0&dl=http%3A%2F%2Flocalhost%2F&dt=AMOLI%20%7C%20Guacamole%20artesanal%2C%20real%20y%20honesto&en=scroll&epn.percent_scrolled=90&_et=20&tfd=7341
+- status: 0
+- durationMs: 108
+
+## 2026-08-23 17:15:16.462Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:15:22.804Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Ingredientes y Nutrición"}
+
+## 2026-08-23 17:15:23.524Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Ingredientes y Nutrición"}
+
+## 2026-08-23 17:15:40.532Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Añadir al Carrito"}
+
+## 2026-08-23 17:15:42.596Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Carrito1"}
+
+## 2026-08-23 17:15:44.154Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-23 17:15:44.753Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Continuar con el pedido"}
+
+## 2026-08-23 17:15:44.755Z navigate
+- url: http://localhost:3000/checkout
+- via: pushState
+
+## 2026-08-23 17:15:45.712Z console.warn
+- text: Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+
+## 2026-08-23 17:15:45.987Z console.warn
+- text: As of March 1st, 2025, google.maps.places.Autocomplete is not available to new customers. Please use google.maps.places.PlaceAutocompleteElement instead. At this time, google.maps.places.Autocomplete is not scheduled to be discontinued, but google.maps.places.PlaceAutocompleteElement is recommended over google.maps.places.Autocomplete. While google.maps.places.Autocomplete will continue to receive bug fixes for any major regressions, existing bugs in google.maps.places.Autocomplete will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/legacy for additional details and https://developers.google.com/maps/documentation/javascript/places-migration-overview for the migration guide.
+
+## 2026-08-23 17:15:46.519Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:15:46.613Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:15:51.147Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787505310428&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=3&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385422&dl=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&sid=1787505311&sct=2&seg=1&dt=Finalizar%20pedido%20%7C%20AMOLI&en=page_view&_et=32827&tfd=41979
+- status: 0
+- durationMs: 155
+
+## 2026-08-23 17:15:51.148Z console.error
+- text: Fetch error from : 
+
+## 2026-08-23 17:15:56.387Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a n 38 b sur 12","valueLength":26,"text":""}
+
+## 2026-08-23 17:15:56.405Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":"address","placeholder":"Ej. Calle 10 # 43-20, apto 301","label":"Dirección de entrega *","value":"carrera 46 a n 38 b sur 12","valueLength":26,"text":""}
+
+## 2026-08-23 17:15:56.429Z focus
+- element: {"tag":"textarea","role":null,"ariaLabel":null,"name":null,"type":null,"id":"notes","placeholder":null,"label":"Notas adicionales","value":"","valueLength":0,"text":""}
+
+## 2026-08-23 17:15:56.617Z change
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"Envigado","valueLength":8,"text":"MedellínEnvigadoItagüíSabanetaLa EstrellaBelloCaldasCopacabanaRionegroBogotáCaliBarranquillaCartagenaBucaramangaOtra ciudad"}
+
+## 2026-08-23 17:15:56.643Z console.warn
+- text: As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead. At this time, google.maps.Marker is not scheduled to be discontinued, but google.maps.marker.AdvancedMarkerElement is recommended over google.maps.Marker. While google.maps.Marker will continue to receive bug fixes for any major regressions, existing bugs in google.maps.Marker will not be addressed. At least 12 months notice will be given before support is discontinued. Please see https://developers.google.com/maps/deprecations for additional details and https://developers.google.com/maps/documentation/javascript/advanced-markers/migration for the migration guide.
+
+## 2026-08-23 17:16:02.388Z network.error
+- method: POST
+- url: https://www.google-analytics.com/g/collect?v=2&tid=G-494MCYFSWX&gtm=45je68j0v9260983210za200zd9260983210&_p=1787505310428&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEEAAAQ&ae=a&are=1&cid=59102733.1767833873&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1360x768&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.170%7CChromium%3B151.0.7922.170&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=es-419&_s=4&tag_exp=115938465~115938469~118897920~118897930~119367802~119367810~120213116~120315470~120385422&sid=1787505311&sct=2&seg=1&dl=http%3A%2F%2Flocalhost%2Fcheckout&dr=http%3A%2F%2Flocalhost%3A3000%2F&dt=Finalizar%20pedido%20%7C%20AMOLI&en=form_start&ep.form_id=&ep.form_destination=http%3A%2F%2Flocalhost%3A3000%2Fcheckout&epn.form_length=9&ep.first_field_id=address&epn.first_field_position=6&_et=10410&tfd=53283
+- status: 0
+- durationMs: 92
+
+## 2026-08-23 17:16:02.388Z console.error
+- text: Fetch error from : 
+

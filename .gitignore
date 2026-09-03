@@ -6,6 +6,7 @@ node_modules/
 dist/
 build/
 .vite/
+.next/
 
 # Variables de entorno (contienen tus llaves de Supabase — NUNCA subir esto)
 .env
