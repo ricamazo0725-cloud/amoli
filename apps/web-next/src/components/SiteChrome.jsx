@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { ShoppingCart as CartIcon, Menu, Truck, Leaf, ShieldCheck, X } from 'lucide-react';
 import { useCart } from '@/hooks/useCart';
 import ShoppingCartPanel from '@/components/ShoppingCart';
+import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 
 const NAV = [
   { href: '/#productos', label: 'Productos' },
@@ -159,6 +160,7 @@ const SiteChrome = ({ children }) => {
       </footer>
 
       <ShoppingCartPanel isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+      <WhatsAppFloatingButton />
     </div>
   );
 };
