@@ -15,6 +15,7 @@ export default async function sitemap() {
   const staticRoutes = [
     { url: `${BASE_URL}/`, priority: 1.0, changeFrequency: 'daily' },
     { url: `${BASE_URL}/productos`, priority: 0.9, changeFrequency: 'daily' },
+    { url: `${BASE_URL}/aliados`, priority: 0.6, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/marcas`, priority: 0.7, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/combos`, priority: 0.7, changeFrequency: 'weekly' },
     { url: `${BASE_URL}/ofertas`, priority: 0.7, changeFrequency: 'weekly' },
