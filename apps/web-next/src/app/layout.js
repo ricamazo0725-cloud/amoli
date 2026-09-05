@@ -1,6 +1,7 @@
 import Script from 'next/script';
 import './globals.css';
 import Providers from '@/components/Providers';
+import { WHATSAPP_TEL } from '@/lib/contact';
 
 // metadataBase habilita URLs absolutas automáticas para openGraph/canonical
 // en cada page.js — sin esto, Next arma las URLs relativas al dominio donde
@@ -48,7 +49,7 @@ const organizationJsonLd = {
   description: 'Guacamole artesanal elaborado con aguacate Hass montañero de Antioquia.',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+57-300-290-2010',
+    telephone: WHATSAPP_TEL,
     contactType: 'customer service',
     areaServed: 'CO',
   },

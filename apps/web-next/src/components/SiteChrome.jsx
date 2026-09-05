@@ -10,6 +10,7 @@ import { ShoppingCart as CartIcon, Menu, Truck, Leaf, ShieldCheck, X } from 'luc
 import { useCart } from '@/hooks/useCart';
 import ShoppingCartPanel from '@/components/ShoppingCart';
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
+import { WHATSAPP_DISPLAY } from '@/lib/contact';
 
 const NAV = [
   { href: '/#productos', label: 'Productos' },
@@ -148,7 +149,7 @@ const SiteChrome = ({ children }) => {
           <div>
             <p className="font-display text-lg font-bold text-background">Contacto</p>
             <ul className="mt-3 space-y-2">
-              <li>WhatsApp: +57 300 290 2010</li>
+              <li>WhatsApp: {WHATSAPP_DISPLAY}</li>
               <li>saboresamoli@gmail.com</li>
               <li>Cra. 39B #45A Sur-07, Envigado, Ant.</li>
             </ul>

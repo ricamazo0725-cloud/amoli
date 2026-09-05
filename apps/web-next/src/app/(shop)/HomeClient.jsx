@@ -21,6 +21,7 @@ import ProductsList from '@/components/ProductsList';
 import { getProducts, formatCOP } from '@/api/products';
 import { useCart } from '@/hooks/useCart';
 import { useToast } from '@/hooks/use-toast';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 
 const HARD_SHADOW = 'shadow-[6px_6px_0px_0px_rgba(42,42,42,1)]';
 const HARD_SHADOW_LG = 'shadow-[8px_8px_0px_0px_rgba(42,42,42,1)]';
@@ -141,7 +142,7 @@ const HomeClient = ({ initialProducts = [] }) => {
 
 Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
 
-    window.open(`https://wa.me/573002902010?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
@@ -584,7 +585,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
             </p>
           </div>
           <a
-            href="https://wa.me/573002902010?text=Hola%20AMOLI!%20Quisiera%20informaci%C3%B3n%20sobre%20sus%20productos."
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola AMOLI! Quisiera informaci\u00f3n sobre sus productos.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className={`flex shrink-0 items-center gap-2 rounded-xl border-2 border-foreground bg-foreground px-6 py-3.5 font-heading text-xs font-black uppercase text-background transition hover:bg-primary active:translate-x-[2px] active:translate-y-[2px] ${HARD_SHADOW}`}

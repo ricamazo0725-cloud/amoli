@@ -11,6 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
 import { AddressMapPicker } from '@/components/AddressMapPicker';
 import { createManualOrder } from '@/api/orders';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 import { formatCOP, getProductsByIds } from '@/api/products';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,8 +35,6 @@ import {
   validateNotes,
   sanitizePhone,
 } from '@/lib/validation';
-
-const STORE_WHATSAPP_NUMBER = '573002902010';
 
 const emptyCustomer = { name: '', phone: '', email: '', city: '', address: '', notes: '' };
 
@@ -176,7 +175,7 @@ const CheckoutClient = () => {
         total: getCartTotalValue(),
       });
 
-      const whatsappUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${buildWhatsappMessage(order)}`;
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${buildWhatsappMessage(order)}`;
       clearCart();
       // react-router-dom permitía pasar `state` a la ruta destino; next/navigation
       // no tiene ese mecanismo para navegación de cliente, así que lo pasamos

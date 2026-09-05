@@ -25,6 +25,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 import {
   CITY_OPTIONS,
   NOTES_MAX_LENGTH,
@@ -39,7 +40,6 @@ import {
 
 const HARD_SHADOW = 'shadow-[6px_6px_0px_0px_rgba(42,42,42,1)]';
 const HARD_SHADOW_SM = 'shadow-[3px_3px_0px_0px_rgba(42,42,42,1)]';
-const STORE_WHATSAPP_NUMBER = '573002902010';
 const BUSINESS_TYPES = ['Minimercado', 'Tienda saludable', 'Fruver', 'Otro'];
 
 const BENEFITS = [
@@ -165,7 +165,7 @@ const AliadosClient = () => {
     const sanitizedPhone = sanitizePhone(form.phone);
     setForm((f) => ({ ...f, phone: sanitizedPhone }));
 
-    const whatsappUrl = `https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${buildWhatsappMessage()}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${buildWhatsappMessage()}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
   };
@@ -245,7 +245,7 @@ const AliadosClient = () => {
             </p>
             <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
-                href={`https://wa.me/${STORE_WHATSAPP_NUMBER}?text=${buildWhatsappMessage()}`}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${buildWhatsappMessage()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex h-11 items-center gap-2 rounded-xl border-2 border-foreground bg-foreground px-5 font-heading text-xs font-black uppercase text-background transition hover:bg-primary ${HARD_SHADOW_SM}`}

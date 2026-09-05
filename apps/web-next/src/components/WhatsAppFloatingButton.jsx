@@ -1,14 +1,13 @@
 'use client';
 
 // Boton flotante de WhatsApp, visible en todas las paginas publicas de la
-// tienda (se monta desde SiteChrome, igual que el carrito). Numero de
-// contacto general del negocio — distinto del numero que usan el checkout
-// y el CTA de "comprar por WhatsApp" en el home, que es el de confirmacion
-// de pedidos.
+// tienda (se monta desde SiteChrome, igual que el carrito). Usa el mismo
+// numero centralizado en lib/contact.js que el resto del sitio (checkout,
+// home, aliados, footer, JSON-LD).
 
 import React from 'react';
+import { WHATSAPP_NUMBER } from '@/lib/contact';
 
-const WHATSAPP_NUMBER = '573234220813';
 const DEFAULT_MESSAGE = '¡Hola AMOLI! Tengo una pregunta.';
 
 const WhatsAppFloatingButton = () => {
