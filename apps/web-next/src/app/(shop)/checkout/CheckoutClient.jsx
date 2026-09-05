@@ -3,13 +3,14 @@
 import React, { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Loader2, ArrowLeft, MapPin } from 'lucide-react';
+import { Loader2, ArrowLeft, MapPin, Landmark, Banknote, CreditCard, Link2, Check } from 'lucide-react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { useCart } from '@/hooks/useCart';
 import { useToast } from '@/hooks/use-toast';
 import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
 import { AddressMapPicker } from '@/components/AddressMapPicker';
+import DeliveryHoursCard from '@/components/DeliveryHoursCard';
 import { createManualOrder } from '@/api/orders';
 import { WHATSAPP_NUMBER } from '@/lib/contact';
 import { formatCOP, getProductsByIds } from '@/api/products';
@@ -36,7 +37,44 @@ import {
   sanitizePhone,
 } from '@/lib/validation';
 
-const emptyCustomer = { name: '', phone: '', email: '', city: '', address: '', notes: '' };
+const emptyCustomer = { name: '', phone: '', email: '', city: '', address: '', notes: '', paymentMethod: '' };
+
+// PLACEHOLDER: confirmar cuáles de estos métodos ofrece AMOLI realmente y en
+// qué zonas — por ahora replica el patrón visto en un sitio de referencia
+// (transferencia con datos enviados por WhatsApp tras verificar el pedido,
+// efectivo y datáfono solo en Medellín/Área Metropolitana, link de pago para
+// el resto del país o el exterior).
+const PAYMENT_METHODS = [
+  {
+    id: 'transferencia',
+    label: 'Transferencia bancaria',
+    icon: Landmark,
+    scope: 'Válido para toda Colombia',
+    note: 'Cuando tu pedido sea verificado, te enviaremos la información de pago por WhatsApp. Por favor no hagas el pago antes de recibir la confirmación.',
+  },
+  {
+    id: 'efectivo',
+    label: 'Efectivo',
+    icon: Banknote,
+    scope: 'Solo para Medellín y Área Metropolitana',
+  },
+  {
+    id: 'datafono',
+    label: 'Datáfono (tarjeta débito o crédito)',
+    icon: CreditCard,
+    scope: 'Solo para Medellín y Área Metropolitana',
+  },
+  {
+    id: 'link_pago',
+    label: 'Link de pago (tarjeta de crédito)',
+    icon: Link2,
+    scope: 'Válido para pagos nacionales o desde el exterior',
+  },
+];
+
+function validatePaymentMethod(value) {
+  return value ? null : 'Selecciona un método de pago.';
+}
 
 const CheckoutClient = () => {
   const { cartItems, getCartTotal, getCartTotalValue, clearCart, removeFromCart } = useCart();
@@ -92,6 +130,7 @@ const CheckoutClient = () => {
     city: validateCity,
     address: validateAddress,
     notes: validateNotes,
+    paymentMethod: validatePaymentMethod,
   }), []);
 
   const validateAll = () => {
@@ -104,7 +143,7 @@ const CheckoutClient = () => {
       if (message) nextErrors[field] = message;
     });
     setErrors(nextErrors);
-    setTouched({ name: true, phone: true, email: true, city: true, address: true, notes: true });
+    setTouched({ name: true, phone: true, email: true, city: true, address: true, notes: true, paymentMethod: true });
     return Object.keys(nextErrors).length === 0;
   };
 
@@ -115,15 +154,18 @@ const CheckoutClient = () => {
 
   const buildWhatsappMessage = (order) => {
     const finalAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
+    const paymentLabel = PAYMENT_METHODS.find((m) => m.id === customer.paymentMethod)?.label;
     const lines = [
       `Hola, quiero confirmar mi pedido #${order.id.slice(0, 8)}:`,
       ...cartItems.map(
         (item) => `• ${item.quantity} x ${item.product.title} — ${formatCOP((item.product.sale_price ?? item.product.price) * item.quantity)}`
       ),
-      `Total: ${formatCOP(getCartTotalValue())}`,
+      `Subtotal: ${formatCOP(getCartTotalValue())}`,
+      'Domicilio: se confirma según tu zona',
       `Nombre: ${customer.name}`,
       customer.city ? `Ciudad: ${customer.city}` : null,
       finalAddress ? `Dirección: ${finalAddress}` : null,
+      paymentLabel ? `Método de pago: ${paymentLabel}` : null,
     ].filter(Boolean);
     return encodeURIComponent(lines.join('\n'));
   };
@@ -158,9 +200,18 @@ const CheckoutClient = () => {
       }
 
       const finalAddress = addressInputRef.current ? addressInputRef.current.value : customer.address;
+      // orders.notes no tiene una columna propia para el método de pago (evitamos
+      // una migración de esquema que no podemos verificar desde aquí) — lo
+      // anteponemos como texto a las notas para que quede registrado igual.
+      const paymentLabelForNotes = PAYMENT_METHODS.find((m) => m.id === customer.paymentMethod)?.label;
+      const notesWithPayment = [
+        paymentLabelForNotes ? `Método de pago: ${paymentLabelForNotes}` : null,
+        customer.notes || null,
+      ].filter(Boolean).join(' — ');
       const sanitizedCustomer = {
         ...customer,
         address: finalAddress,
+        notes: notesWithPayment,
         phone: sanitizePhone(customer.phone),
         lat: coords?.lat ?? null,
         lng: coords?.lng ?? null,
@@ -223,10 +274,27 @@ const CheckoutClient = () => {
             </div>
           ))}
         </div>
-        <div className="mt-4 flex justify-between border-t border-border pt-4 text-lg font-bold">
+        <div className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
+          <div className="flex justify-between text-muted-foreground">
+            <span>Subtotal</span>
+            <span>{getCartTotal()}</span>
+          </div>
+          <div className="flex justify-between text-muted-foreground">
+            <span>Domicilio</span>
+            <span>Se confirma según tu zona</span>
+          </div>
+        </div>
+        <div className="mt-2 flex justify-between border-t border-border pt-4 text-lg font-bold">
           <span>Total</span>
           <span className="text-primary">{getCartTotal()}</span>
         </div>
+        <p className="mt-2 text-xs text-muted-foreground">
+          * El valor del domicilio se confirma por WhatsApp según tu dirección — no está incluido en este total todavía.
+        </p>
+      </div>
+
+      <div className="mb-8">
+        <DeliveryHoursCard />
       </div>
 
       <form onSubmit={handleSubmit} noValidate className="space-y-4 rounded-sm border border-border bg-card p-6">
@@ -375,6 +443,54 @@ const CheckoutClient = () => {
             <span className="text-destructive">{touched.notes && errors.notes ? errors.notes : ''}</span>
             <span className="text-muted-foreground">{customer.notes.length}/{NOTES_MAX_LENGTH}</span>
           </div>
+        </div>
+
+        <div className="space-y-2 border-t border-border pt-4">
+          <h2 className="font-display font-bold">Método de pago *</h2>
+          <p className="text-xs text-muted-foreground">Todas las transacciones son seguras y encriptadas.</p>
+
+          <div className="space-y-3 pt-2">
+            {PAYMENT_METHODS.map((method) => {
+              const Icon = method.icon;
+              const selected = customer.paymentMethod === method.id;
+              return (
+                <div key={method.id}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCustomer((c2) => ({ ...c2, paymentMethod: method.id }));
+                      runFieldValidation('paymentMethod', method.id);
+                      setTouched((t) => ({ ...t, paymentMethod: true }));
+                    }}
+                    className={`flex w-full items-center gap-3 rounded-xl border-2 p-4 text-left transition ${
+                      selected ? 'border-primary bg-secondary' : 'border-border bg-background hover:border-foreground/40'
+                    }`}
+                  >
+                    <span
+                      className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 ${
+                        selected ? 'border-primary bg-primary' : 'border-muted-foreground'
+                      }`}
+                    >
+                      {selected && <Check size={12} className="text-primary-foreground" />}
+                    </span>
+                    <Icon size={18} className="shrink-0 text-muted-foreground" />
+                    <span className="text-sm">
+                      <span className="font-semibold">{method.label}</span>{' '}
+                      <span className="text-muted-foreground">({method.scope})</span>
+                    </span>
+                  </button>
+                  {selected && method.note && (
+                    <p className="mt-2 rounded-lg border border-border bg-secondary/60 p-3 text-xs text-muted-foreground">
+                      {method.note}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          {touched.paymentMethod && errors.paymentMethod && (
+            <p className="text-xs text-destructive">{errors.paymentMethod}</p>
+          )}
         </div>
 
         <Button type="submit" size="lg" className="w-full" disabled={submitting}>
