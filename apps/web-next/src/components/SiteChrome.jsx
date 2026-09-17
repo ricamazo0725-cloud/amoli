@@ -14,9 +14,9 @@ import { WHATSAPP_DISPLAY } from '@/lib/contact';
 
 const NAV = [
   { href: '/#productos', label: 'Productos' },
-  { href: '/#filosofia', label: 'Nuestra Filosofía' },
   { to: '/aliados', label: 'Vende AMOLI', isButton: true },
   { href: '/#contacto', label: 'Contacto' },
+  { href: '/#blog', label: 'Blog' },
 ];
 
 const SiteChrome = ({ children }) => {
@@ -134,7 +134,7 @@ const SiteChrome = ({ children }) => {
             <p className="font-display text-lg font-bold text-background">Tienda</p>
             <ul className="mt-3 space-y-2">
               <li><a href="/#productos" className="hover:text-primary">Productos (450g)</a></li>
-              <li><a href="/#filosofia" className="hover:text-primary">Nuestra Filosofía</a></li>
+              <li><a href="/#blog" className="hover:text-primary">Blog</a></li>
               <li><Link href="/aliados" className="hover:text-primary">Aliados B2B</Link></li>
             </ul>
           </div>

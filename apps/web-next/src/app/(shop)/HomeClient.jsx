@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   ShoppingCart,
   Leaf,
-  Flame,
+  ChefHat,
   Mountain,
   MessageCircle,
   Star,
@@ -29,30 +29,6 @@ const HARD_SHADOW_SM = 'shadow-[3px_3px_0px_0px_rgba(42,42,42,1)]';
 
 const placeholderImage = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTgxODE4Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzlDQTNBRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNpbiBpbWFnZW48L3RleHQ+Cjwvc3ZnPgo=";
 
-const pillars = [
-  {
-    value: '0%',
-    color: 'text-accent',
-    title: 'Sin Aditivos Ni Rellenos',
-    text: 'Garantizamos un sabor limpio. No diluimos la receta con agua, harinas ni colorantes sintéticos.',
-    emoji: '🌿'
-  },
-  {
-    value: '100%',
-    color: 'text-primary',
-    title: 'Aguacate Hass Montañero',
-    text: 'Cultivado en el campo antioqueño. Mantenemos trocitos reales para dar la mejor textura en cada cucharada.',
-    emoji: '🥑'
-  },
-  {
-    value: 'HONESTO',
-    color: 'text-background',
-    title: 'Proceso Artesanal',
-    text: 'Ingredientes seleccionados minuciosamente para ofrecer un sabor casero y una experiencia auténtica.',
-    emoji: '✨'
-  },
-];
-
 /**
  * @param {{ initialProducts: Array }} props - productos ya cargados en el
  *   servidor (page.js) para que el HTML inicial traiga el producto
@@ -63,7 +39,7 @@ const HomeClient = ({ initialProducts = [] }) => {
   const [loading, setLoading] = useState(initialProducts.length === 0);
   const [selectedProduct, setSelectedProduct] = useState(() => {
     if (initialProducts.length === 0) return null;
-    return initialProducts.find(p => p.title.toLowerCase().includes('picante')) || initialProducts[0];
+    return initialProducts.find(p => p.title.toLowerCase().includes('limonudo')) || initialProducts[0];
   });
   const [quantity, setQuantity] = useState(1);
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -80,7 +56,7 @@ const HomeClient = ({ initialProducts = [] }) => {
         const data = await getProducts();
         if (isMounted && data && data.length > 0) {
           setProducts(data);
-          const defaultProd = data.find(p => p.title.toLowerCase().includes('picante')) || data[0];
+          const defaultProd = data.find(p => p.title.toLowerCase().includes('limonudo')) || data[0];
           setSelectedProduct(defaultProd);
         }
       } catch (err) {
@@ -119,6 +95,19 @@ const HomeClient = ({ initialProducts = [] }) => {
   const unitPrice = selectedProduct?.sale_price ?? selectedProduct?.price ?? 18500;
   const totalPriceFormatted = formatCOP(unitPrice * quantity);
   const isPicante = selectedProduct?.title?.toLowerCase().includes('picante');
+  // Limonudo primero en los selectores de sabor.
+  const sortedProducts = useMemo(() => {
+    return [...products].sort((a, b) => {
+      const aFirst = a.title.toLowerCase().includes('limonudo') ? 0 : 1;
+      const bFirst = b.title.toLowerCase().includes('limonudo') ? 0 : 1;
+      return aFirst - bFirst;
+    });
+  }, [products]);
+  // El nombre del producto en la base de datos trae el peso al final (ej.
+  // "Guacamole AMOLI Picante 450g"); esa info ya se muestra en las
+  // etiquetas de presentación, así que la quitamos del título visible.
+  const cleanTitle = (title) => (title || '').replace(/\s*\d+\s*g\.?\s*$/i, '').trim();
+  const displayTitle = cleanTitle(selectedProduct?.title);
 
   const handleAddToCart = () => {
     if (!selectedProduct) return;
@@ -126,27 +115,49 @@ const HomeClient = ({ initialProducts = [] }) => {
       addToCart(selectedProduct, quantity);
       toast({
         title: 'Añadido al carrito',
-        description: `${quantity}x ${selectedProduct.title} añadido a tu pedido.`,
+        description: `${quantity}x ${cleanTitle(selectedProduct.title)} añadido a tu pedido.`,
       });
     } catch (error) {
       toast({ variant: 'destructive', title: 'Error', description: error.message });
     }
   };
 
-  const handleWhatsAppBuy = () => {
-    if (!selectedProduct) return;
-    const message = `Hola AMOLI! Quisiera pedir:
-- Producto: ${selectedProduct.title}
-- Cantidad: ${quantity}
-- Total: ${totalPriceFormatted}
-
-Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
-
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
+
+      <section className="border-b-2 border-foreground">
+        <div className="relative h-[42vh] min-h-[260px] w-full overflow-hidden sm:h-[52vh] lg:h-[64vh]">
+          <img
+            src="/images/hero-amoli-jars.jpg"
+            alt="Frascos de guacamole AMOLI sobre aguacates frescos"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <div className="bg-secondary">
+          <div className="mx-auto grid max-w-[90rem] grid-cols-1 items-center gap-8 px-4 py-12 sm:px-8 lg:grid-cols-12 lg:py-20">
+            <div className="lg:col-span-7">
+              <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
+                Una marca joven, fresca y consciente.
+              </h2>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                AMOLI nace para llevar a la categoría de refrigerados un guacamole visible, honesto y de alta rotación: sabor de aguacate, textura real y una imagen que se reconoce desde la góndola.
+              </p>
+            </div>
+            <div className="lg:col-span-5 lg:text-right">
+              <span className="font-display text-6xl font-black leading-none tracking-tight text-foreground sm:text-7xl lg:text-8xl">
+                AMOLI
+              </span>
+            </div>
+          </div>
+
+          <div className="border-t-2 border-foreground bg-foreground py-4">
+            <p className="mx-auto max-w-[90rem] px-4 text-center font-heading text-xs font-black uppercase tracking-[0.2em] text-background sm:text-sm">
+              Vida sana · Frescura · Natural · Sin conservantes
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section id="producto-destacado" className="mx-auto max-w-[90rem] px-4 py-8 sm:px-6 lg:px-8 lg:py-12 border-b-2 border-foreground">
         {loading ? (
@@ -188,7 +199,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 border-t-2 border-foreground bg-background p-4">
-                  {products.map((p) => {
+                  {sortedProducts.map((p) => {
                     const active = selectedProduct.id === p.id;
                     const isP = p.title.toLowerCase().includes('picante');
                     return (
@@ -217,8 +228,8 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                   <span className="text-[10px] text-muted-foreground">Receta Limpia</span>
                 </div>
                 <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                  <Flame className="mx-auto mb-1 h-5 w-5 text-primary" />
-                  <span className="block font-heading text-xs font-bold uppercase">Sabor Honesto</span>
+                  <ChefHat className="mx-auto mb-1 h-5 w-5 text-primary" />
+                  <span className="block font-heading text-xs font-bold uppercase">Sabor Real</span>
                   <span className="text-[10px] text-muted-foreground">Sin Rellenos</span>
                 </div>
                 <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
@@ -232,10 +243,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
             <div className="space-y-6 lg:col-span-5">
 
               <div className="border-b-2 border-foreground pb-6">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                    FRASCO DE VIDRIO • 450G
-                  </span>
+                <div className="mb-2 flex items-center justify-end">
                   <div className="flex items-center gap-1 text-sm font-bold text-amber-500">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-amber-500 text-amber-500" />
@@ -244,7 +252,7 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                 </div>
 
                 <h1 className="font-display text-4xl font-black leading-none tracking-tight text-foreground sm:text-5xl">
-                  {selectedProduct.title}
+                  {displayTitle}
                 </h1>
 
                 <p className="mt-3 text-sm font-medium text-muted-foreground leading-relaxed">
@@ -263,10 +271,10 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
 
               <div className="space-y-3">
                 <label className="block font-heading text-xs font-bold uppercase tracking-wider text-foreground">
-                  1. SELECCIONA EL SABOR: <span className="font-black text-primary">{selectedProduct.title.toUpperCase()}</span>
+                  1. SELECCIONA EL SABOR: <span className="font-black text-primary">{displayTitle.toUpperCase()}</span>
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  {products.map((p) => {
+                  {sortedProducts.map((p) => {
                     const isSelected = p.id === selectedProduct.id;
                     const isP = p.title.toLowerCase().includes('picante');
                     return (
@@ -285,59 +293,31 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <label className="block font-heading text-xs font-bold uppercase tracking-wider text-foreground">
-                  2. PRESENTACIÓN ÚNICA:
-                </label>
-                <div className="flex items-center justify-between rounded-xl border-2 border-foreground bg-secondary p-3.5">
-                  <div className="flex items-center gap-3">
-                    <div className="rounded-lg bg-background p-2 text-foreground font-extrabold border border-foreground">🫙</div>
-                    <div>
-                      <span className="block font-heading text-sm font-bold text-foreground">Frasco de Vidrio 450g</span>
-                      <span className="text-[11px] text-muted-foreground">Porción ideal para disfrutar en su punto óptimo</span>
-                    </div>
-                  </div>
-                  <span className="rounded border border-foreground bg-background px-2.5 py-1 font-mono text-xs font-bold">
-                    450 GRAMOS
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-4 pt-2">
-                <div className="flex gap-4">
-                  <div className={`flex items-center overflow-hidden rounded-xl border-2 border-foreground bg-background ${HARD_SHADOW_SM}`}>
-                    <button
-                      onClick={() => handleQtyChange(-1)}
-                      className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
-                    >
-                      <Minus className="h-3.5 w-3.5" />
-                    </button>
-                    <span className="min-w-[40px] text-center font-mono text-lg font-bold text-foreground">
-                      {quantity}
-                    </span>
-                    <button
-                      onClick={() => handleQtyChange(1)}
-                      className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
-                    >
-                      <Plus className="h-3.5 w-3.5" />
-                    </button>
-                  </div>
-
+              <div className="flex gap-4 pt-2">
+                <div className={`flex items-center overflow-hidden rounded-xl border-2 border-foreground bg-background ${HARD_SHADOW_SM}`}>
                   <button
-                    onClick={handleAddToCart}
-                    className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-foreground bg-foreground px-6 py-3.5 font-heading text-base font-black uppercase text-background transition-all hover:bg-primary hover:text-primary-foreground active:translate-y-0.5 ${HARD_SHADOW}`}
+                    onClick={() => handleQtyChange(-1)}
+                    className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
                   >
-                    <ShoppingCart className="h-5 w-5" />
-                    <span>Añadir al Carrito</span>
+                    <Minus className="h-3.5 w-3.5" />
+                  </button>
+                  <span className="min-w-[40px] text-center font-mono text-lg font-bold text-foreground">
+                    {quantity}
+                  </span>
+                  <button
+                    onClick={() => handleQtyChange(1)}
+                    className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
+                  >
+                    <Plus className="h-3.5 w-3.5" />
                   </button>
                 </div>
 
                 <button
-                  onClick={handleWhatsAppBuy}
-                  className={`flex w-full items-center justify-center gap-2 rounded-xl border-2 border-foreground bg-accent px-6 py-3.5 font-heading text-base font-black uppercase text-foreground transition-all hover:brightness-95 active:translate-y-0.5 ${HARD_SHADOW}`}
+                  onClick={handleAddToCart}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-foreground bg-accent px-6 py-3.5 font-heading text-base font-black uppercase text-foreground transition-all hover:brightness-95 active:translate-y-0.5 ${HARD_SHADOW}`}
                 >
-                  <MessageCircle className="h-5 w-5" />
-                  <span>Pedir por WhatsApp ({totalPriceFormatted})</span>
+                  <ShoppingCart className="h-5 w-5" />
+                  <span>Agregar al Carrito ({totalPriceFormatted})</span>
                 </button>
               </div>
 
@@ -416,11 +396,11 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
             </motion.p>
 
             <p className="mt-3 font-display text-2xl font-black uppercase tracking-wide text-primary sm:text-3xl">
-              Guacamole real, sin artificios
+              Guacamole real
             </p>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Elaborado mediante un proceso artesanal, fresco y responsable. Sin aditivos, sin harinas ni conservantes sintéticos — solo el mejor aguacate de nuestras montañas e ingredientes seleccionados.
+              Elaborado mediante un proceso artesanal, fresco y responsable. Sin aditivos ni conservantes sintéticos — solo el mejor aguacate de nuestras montañas e ingredientes seleccionados.
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-3 max-w-lg">
@@ -429,8 +409,8 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
                 <span className="block font-heading text-xs font-bold uppercase">Sin Conservantes</span>
               </div>
               <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                <Flame className="mx-auto mb-1 h-5 w-5 text-primary" />
-                <span className="block font-heading text-xs font-bold uppercase">Sabor Honesto</span>
+                <ChefHat className="mx-auto mb-1 h-5 w-5 text-primary" />
+                <span className="block font-heading text-xs font-bold uppercase">Sabor Real</span>
               </div>
               <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
                 <Mountain className="mx-auto mb-1 h-5 w-5 text-foreground" />
@@ -503,79 +483,6 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
         <ProductsList initialProducts={initialProducts.length > 0 ? initialProducts : undefined} />
       </section>
 
-      <section id="filosofia" className="border-y-4 border-foreground bg-foreground py-16 text-background">
-        <div className="mx-auto max-w-[90rem] px-4 sm:px-8">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="mb-2 block font-heading text-xs font-bold uppercase tracking-widest text-accent">
-              Manifesto AMOLI
-            </span>
-            <h2 className="font-display text-5xl font-black tracking-wide sm:text-6xl">
-              GUACAMOLE REAL, <span className="text-accent">SIN ARTIFICIOS</span>
-            </h2>
-            <p className="mt-3 text-sm text-background/70">
-              Sin trucos, sin aditivos y sin rellenos. Una receta honesta que respeta la frescura del aguacate de nuestras montañas.
-            </p>
-          </div>
-
-          <div className="my-12 grid grid-cols-1 lg:grid-cols-12 items-center gap-8 rounded-3xl border-2 border-background/20 bg-background/5 p-8 sm:p-12">
-            <div className="lg:col-span-5 flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-                whileHover={{ scale: 1.03 }}
-                className="relative overflow-hidden rounded-3xl shadow-2xl"
-              >
-                <img
-                  src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoliagucate.webp"
-                  alt="Aguacate Hass Montañero AMOLI"
-                  className="max-h-[340px] w-full object-cover rounded-3xl"
-                />
-              </motion.div>
-            </div>
-            <div className="lg:col-span-7 space-y-4">
-              <span className="inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-foreground font-heading uppercase">
-                🥑 Selección Premium de Origen
-              </span>
-              <h3 className="font-display text-3xl sm:text-4xl font-black text-background">
-                DEL ÁRBOL ANTIOQUEÑO DIRECTO A TU MESA
-              </h3>
-              <p className="text-sm text-background/80 leading-relaxed">
-                Cada frasco de AMOLI comienza con una selección rigurosa de aguacate Hass cosechado en las montañas de Antioquia. Cuidamos cada detalle del proceso para asegurar una textura cremosa natural y un sabor inigualable sin recurrir a aditivos artificiales.
-              </p>
-              <div className="pt-2 flex items-center gap-6 font-mono text-xs text-accent font-bold">
-                <span>✓ 100% Hass Natural</span>
-                <span>✓ Cosecha Local</span>
-                <span>✓ Frescura Garantizada</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {pillars.map((p) => (
-              <div
-                key={p.title}
-                className="group relative overflow-hidden rounded-2xl border-2 border-background/20 bg-background/5 p-6 transition-colors hover:border-accent"
-              >
-                <div className={`mb-3 font-display text-5xl font-black ${p.color}`}>
-                  {p.value}
-                </div>
-                <h3 className="mb-2 font-heading text-lg font-bold uppercase text-background">
-                  {p.title}
-                </h3>
-                <p className="text-xs leading-relaxed text-background/60">
-                  {p.text}
-                </p>
-                <div className="pointer-events-none absolute -bottom-6 -right-4 select-none font-display text-8xl opacity-10">
-                  {p.emoji}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="contacto" className="mx-auto max-w-[90rem] px-4 py-16 sm:px-8">
         <div className={`flex flex-col items-center justify-between gap-6 rounded-3xl border-2 border-foreground bg-accent p-8 md:flex-row ${HARD_SHADOW_LG}`}>
           <div>
@@ -592,6 +499,28 @@ Ubicación de entrega: Medellín / Envigado / Valle de Aburrá.`;
           >
             <MessageCircle size={18} className="text-accent" /> Contactar por WhatsApp
           </a>
+        </div>
+      </section>
+
+      <section id="blog" className="border-y-4 border-foreground bg-foreground py-16 text-background">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="mb-2 block font-heading text-xs font-bold uppercase tracking-widest text-accent">
+              Blog AMOLI
+            </span>
+            <h2 className="font-display text-5xl font-black tracking-wide sm:text-6xl">
+              RECETAS, HISTORIAS <span className="text-accent">Y NOVEDADES</span>
+            </h2>
+            <p className="mt-3 text-sm text-background/70">
+              Entérate de lo último sobre AMOLI: recetas con guacamole, novedades de la marca y contenido fresco directo desde Antioquia.
+            </p>
+            <Link
+              href="/blog"
+              className={`mt-8 inline-flex h-12 items-center gap-2 rounded-xl border-2 border-background bg-accent px-7 font-display text-base font-bold uppercase tracking-wide text-foreground transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${HARD_SHADOW}`}
+            >
+              Ver el Blog
+            </Link>
+          </div>
         </div>
       </section>
 
