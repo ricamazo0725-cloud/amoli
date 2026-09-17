@@ -36,7 +36,7 @@ const SiteChrome = ({ children }) => {
                 <Leaf size={14} className="shrink-0" /> 100% aguacate Hass montañero de Antioquia
               </span>
               <span className="flex items-center gap-2 whitespace-nowrap">
-                <ShieldCheck size={14} className="shrink-0" /> Guacamole real, sin artificios
+                <ShieldCheck size={14} className="shrink-0" /> Guacamole real
               </span>
               <span className="flex items-center gap-2 whitespace-nowrap">
                 <Truck size={14} className="shrink-0" /> Envío refrigerado a tu puerta
