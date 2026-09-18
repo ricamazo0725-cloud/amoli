@@ -126,7 +126,7 @@ const HomeClient = ({ initialProducts = [] }) => {
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
 
       <section className="border-b-2 border-foreground">
-        <div className="relative h-[42vh] min-h-[260px] w-full overflow-hidden sm:h-[52vh] lg:h-[64vh]">
+        <div className="relative h-[26vh] min-h-[180px] w-full overflow-hidden sm:h-[32vh] lg:h-[38vh]">
           <img
             src="/images/hero-amoli-jars.jpg"
             alt="Frascos de guacamole AMOLI sobre aguacates frescos"
@@ -135,7 +135,7 @@ const HomeClient = ({ initialProducts = [] }) => {
         </div>
 
         <div className="bg-secondary">
-          <div className="mx-auto grid max-w-[90rem] grid-cols-1 items-center gap-8 px-4 py-12 sm:px-8 lg:grid-cols-12 lg:py-20">
+          <div className="mx-auto grid max-w-[90rem] grid-cols-1 items-center gap-8 px-4 py-8 sm:px-8 lg:grid-cols-12 lg:py-12">
             <div className="lg:col-span-7">
               <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-foreground sm:text-3xl">
                 Una marca joven, fresca y consciente.
@@ -168,25 +168,25 @@ const HomeClient = ({ initialProducts = [] }) => {
         ) : selectedProduct ? (
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-12">
 
-            <div className="space-y-4 lg:col-span-7">
+            <div className="space-y-3 lg:col-span-7">
               <div className={`relative overflow-hidden rounded-2xl border-2 border-foreground bg-secondary ${HARD_SHADOW_LG}`}>
 
-                <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-                  <span className="inline-flex items-center gap-1 rounded-full border border-foreground bg-background px-3 py-1.5 font-heading text-xs font-bold uppercase text-foreground shadow">
+                <div className="absolute top-3 left-3 z-10 flex flex-col gap-1.5 sm:top-4 sm:left-4 sm:gap-2">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-foreground bg-background px-2.5 py-1 font-heading text-[10px] font-bold uppercase text-foreground shadow sm:px-3 sm:py-1.5 sm:text-xs">
                     🌿 100% Natural
                   </span>
-                  <span className={`rounded-full px-3 py-1.5 font-heading text-xs font-black uppercase text-foreground shadow ${isPicante ? 'bg-primary text-primary-foreground' : 'bg-accent'}`}>
+                  <span className={`rounded-full px-2.5 py-1 font-heading text-[10px] font-black uppercase text-foreground shadow sm:px-3 sm:py-1.5 sm:text-xs ${isPicante ? 'bg-primary text-primary-foreground' : 'bg-accent'}`}>
                     {isPicante ? '🔥 Picante' : '🍋 Limonudo'}
                   </span>
                 </div>
 
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="rounded-md border border-foreground bg-accent px-3 py-1.5 font-mono text-xs font-bold text-foreground">
+                <div className="absolute top-3 right-3 z-10 sm:top-4 sm:right-4">
+                  <span className="rounded-md border border-foreground bg-accent px-2.5 py-1 font-mono text-[10px] font-bold text-foreground sm:px-3 sm:py-1.5 sm:text-xs">
                     450g CONT. NETO
                   </span>
                 </div>
 
-                <div className="relative flex h-[380px] items-center justify-center overflow-hidden p-8 sm:h-[460px]">
+                <div className="relative flex h-[170px] items-center justify-center overflow-hidden p-4 sm:h-[460px] sm:p-8">
                   <motion.img
                     key={selectedProduct.id}
                     initial={{ scale: 0.95, opacity: 0.8 }}
@@ -194,11 +194,11 @@ const HomeClient = ({ initialProducts = [] }) => {
                     transition={{ duration: 0.3 }}
                     src={selectedProduct.images?.[0] || placeholderImage}
                     alt={selectedProduct.title}
-                    className="h-full max-h-[380px] object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105"
+                    className="h-full max-h-[170px] object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105 sm:max-h-[380px]"
                   />
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center gap-4 border-t-2 border-foreground bg-background p-4">
+                <div className="hidden flex-wrap items-center justify-center gap-4 border-t-2 border-foreground bg-background p-4 sm:flex">
                   {sortedProducts.map((p) => {
                     const active = selectedProduct.id === p.id;
                     const isP = p.title.toLowerCase().includes('picante');
@@ -221,29 +221,29 @@ const HomeClient = ({ initialProducts = [] }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3">
-                <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                  <Leaf className="mx-auto mb-1 h-5 w-5 text-lime-600" />
-                  <span className="block font-heading text-xs font-bold uppercase">Sin Conservantes</span>
-                  <span className="text-[10px] text-muted-foreground">Receta Limpia</span>
+              <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                <div className="rounded-xl border-2 border-foreground bg-card p-2 text-center sm:p-3">
+                  <Leaf className="mx-auto mb-1 h-4 w-4 text-lime-600 sm:h-5 sm:w-5" />
+                  <span className="block font-heading text-[10px] font-bold uppercase sm:text-xs">Sin Conservantes</span>
+                  <span className="hidden text-[10px] text-muted-foreground sm:block">Receta Limpia</span>
                 </div>
-                <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                  <ChefHat className="mx-auto mb-1 h-5 w-5 text-primary" />
-                  <span className="block font-heading text-xs font-bold uppercase">Sabor Real</span>
-                  <span className="text-[10px] text-muted-foreground">Sin Rellenos</span>
+                <div className="rounded-xl border-2 border-foreground bg-card p-2 text-center sm:p-3">
+                  <ChefHat className="mx-auto mb-1 h-4 w-4 text-primary sm:h-5 sm:w-5" />
+                  <span className="block font-heading text-[10px] font-bold uppercase sm:text-xs">Sabor Real</span>
+                  <span className="hidden text-[10px] text-muted-foreground sm:block">Sin Rellenos</span>
                 </div>
-                <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                  <Mountain className="mx-auto mb-1 h-5 w-5 text-foreground" />
-                  <span className="block font-heading text-xs font-bold uppercase">Origen Local</span>
-                  <span className="text-[10px] text-muted-foreground">Envigado, Antioquia</span>
+                <div className="rounded-xl border-2 border-foreground bg-card p-2 text-center sm:p-3">
+                  <Mountain className="mx-auto mb-1 h-4 w-4 text-foreground sm:h-5 sm:w-5" />
+                  <span className="block font-heading text-[10px] font-bold uppercase sm:text-xs">Origen Local</span>
+                  <span className="hidden text-[10px] text-muted-foreground sm:block">Envigado, Antioquia</span>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6 lg:col-span-5">
+            <div className="space-y-3 lg:col-span-5">
 
-              <div className="border-b-2 border-foreground pb-6">
-                <div className="mb-2 flex items-center justify-end">
+              <div className="border-b-2 border-foreground pb-3 sm:pb-6">
+                <div className="mb-1 flex items-center justify-end sm:mb-2">
                   <div className="flex items-center gap-1 text-sm font-bold text-amber-500">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-amber-500 text-amber-500" />
@@ -251,16 +251,16 @@ const HomeClient = ({ initialProducts = [] }) => {
                   </div>
                 </div>
 
-                <h1 className="font-display text-4xl font-black leading-none tracking-tight text-foreground sm:text-5xl">
+                <h1 className="font-display text-2xl font-black leading-none tracking-tight text-foreground sm:text-5xl">
                   {displayTitle}
                 </h1>
 
-                <p className="mt-3 text-sm font-medium text-muted-foreground leading-relaxed">
+                <p className="mt-2 text-xs font-medium text-muted-foreground leading-relaxed sm:mt-3 sm:text-sm">
                   {selectedProduct.subtitle || selectedProduct.description?.replace(/<[^>]*>/g, '')}
                 </p>
 
-                <div className="mt-4 flex items-baseline gap-3">
-                  <span className="font-display text-4xl font-black text-primary">
+                <div className="mt-2 flex items-baseline gap-3 sm:mt-4">
+                  <span className="font-display text-2xl font-black text-primary sm:text-4xl">
                     {formatCOP(unitPrice)}
                   </span>
                   <span className="rounded-full bg-accent px-2.5 py-1 text-xs font-bold text-accent-foreground">
@@ -269,11 +269,11 @@ const HomeClient = ({ initialProducts = [] }) => {
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <label className="block font-heading text-xs font-bold uppercase tracking-wider text-foreground">
                   1. SELECCIONA EL SABOR: <span className="font-black text-primary">{displayTitle.toUpperCase()}</span>
                 </label>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                   {sortedProducts.map((p) => {
                     const isSelected = p.id === selectedProduct.id;
                     const isP = p.title.toLowerCase().includes('picante');
@@ -281,7 +281,7 @@ const HomeClient = ({ initialProducts = [] }) => {
                       <button
                         key={p.id}
                         onClick={() => handleSelectProduct(p)}
-                        className={`flex items-center justify-center gap-2 rounded-xl border-2 border-foreground py-3.5 px-4 font-heading text-sm font-black uppercase transition-all ${isSelected
+                        className={`flex items-center justify-center gap-2 rounded-xl border-2 border-foreground py-2.5 px-3 font-heading text-xs font-black uppercase transition-all sm:py-3.5 sm:px-4 sm:text-sm ${isSelected
                           ? `${isP ? 'bg-primary text-primary-foreground' : 'bg-accent text-foreground'} ${HARD_SHADOW_SM}`
                           : 'bg-background text-foreground hover:bg-muted'
                           }`}
@@ -293,20 +293,20 @@ const HomeClient = ({ initialProducts = [] }) => {
                 </div>
               </div>
 
-              <div className="flex gap-4 pt-2">
+              <div className="flex gap-3 pt-1 sm:gap-4 sm:pt-2">
                 <div className={`flex items-center overflow-hidden rounded-xl border-2 border-foreground bg-background ${HARD_SHADOW_SM}`}>
                   <button
                     onClick={() => handleQtyChange(-1)}
-                    className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
+                    className="px-3 py-2 text-foreground transition-colors hover:bg-muted sm:px-4 sm:py-3"
                   >
                     <Minus className="h-3.5 w-3.5" />
                   </button>
-                  <span className="min-w-[40px] text-center font-mono text-lg font-bold text-foreground">
+                  <span className="min-w-[32px] text-center font-mono text-base font-bold text-foreground sm:min-w-[40px] sm:text-lg">
                     {quantity}
                   </span>
                   <button
                     onClick={() => handleQtyChange(1)}
-                    className="px-4 py-3 text-foreground transition-colors hover:bg-muted"
+                    className="px-3 py-2 text-foreground transition-colors hover:bg-muted sm:px-4 sm:py-3"
                   >
                     <Plus className="h-3.5 w-3.5" />
                   </button>
@@ -314,14 +314,14 @@ const HomeClient = ({ initialProducts = [] }) => {
 
                 <button
                   onClick={handleAddToCart}
-                  className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-foreground bg-accent px-6 py-3.5 font-heading text-base font-black uppercase text-foreground transition-all hover:brightness-95 active:translate-y-0.5 ${HARD_SHADOW}`}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-foreground bg-accent px-4 py-2 font-heading text-xs font-black uppercase text-foreground transition-all hover:brightness-95 active:translate-y-0.5 sm:px-6 sm:py-3.5 sm:text-base ${HARD_SHADOW}`}
                 >
-                  <ShoppingCart className="h-5 w-5" />
+                  <ShoppingCart className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span>Agregar al Carrito ({totalPriceFormatted})</span>
                 </button>
               </div>
 
-              <div className="space-y-3 border-t-2 border-foreground pt-4">
+              <div className="space-y-2 border-t-2 border-foreground pt-3 sm:space-y-3 sm:pt-4">
                 <div className="overflow-hidden rounded-xl border-2 border-foreground bg-background">
                   <button
                     onClick={() => toggleAccordion('acc-1')}
@@ -334,7 +334,9 @@ const HomeClient = ({ initialProducts = [] }) => {
                   </button>
                   {openAccordion === 'acc-1' && (
                     <div className="space-y-3 border-t-2 border-foreground bg-background p-4 text-xs text-muted-foreground">
-                      <p><strong>INGREDIENTES:</strong> Aguacate Hass, Limón, Cilantro, Cebolla, Vinagre Blanco, Sal Marina (y Ají/Especias para versión Picante).</p>
+                      <p><strong>INGREDIENTES:</strong> {isPicante
+                        ? 'Aguacate, limón, mezcla de especias (ají, pimienta roja, pimienta negra, cilantro, cebolla), vinagre blanco, sal.'
+                        : 'Aguacate, limón, vinagre blanco, sal, mezcla de especias (cilantro, cebolla).'}</p>
                       <div className="space-y-1 rounded-lg bg-secondary p-3 font-mono text-[11px] text-foreground">
                         <p className="border-b border-border pb-1 font-bold">INFORMACIÓN NUTRICIONAL (Porción 30g)</p>
                         <div className="flex justify-between"><span>Energía:</span> <span>61 kcal</span></div>
@@ -372,16 +374,40 @@ const HomeClient = ({ initialProducts = [] }) => {
         ) : null}
       </section>
 
-      <section className="relative overflow-hidden border-b-2 border-foreground bg-background">
+      <section className="relative overflow-hidden border-b-2 border-foreground">
+        <div className="relative h-[50vh] min-h-[320px] w-full sm:h-[60vh] lg:h-[70vh]">
+          <img
+            src="/images/amoli-rooftop-dinner.png"
+            alt="Amigos compartiendo guacamole AMOLI en una terraza con vista a las montañas de Medellín"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+          <div className="absolute inset-0 flex items-end">
+            <div className="mx-auto w-full max-w-[90rem] px-4 pb-8 sm:px-8 sm:pb-12">
+              <span className="font-display text-4xl font-black uppercase tracking-tight text-background sm:text-6xl">
+                AMOLI
+              </span>
+              <p className="mt-2 font-display text-xl font-black uppercase tracking-wide text-accent sm:text-3xl">
+                El guacamole que se atreve a destacar
+              </p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-background/90 sm:text-base">
+                Frescura real. Sabor sin disfraces. Hecho para quienes no se conforman con lo de siempre.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-b-2 border-foreground bg-background lg:min-h-screen lg:flex lg:items-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(195,246,71,0.35),transparent_50%),radial-gradient(circle_at_85%_75%,rgba(239,54,8,0.15),transparent_50%)]" />
 
-        <div className="relative mx-auto grid max-w-[90rem] items-center gap-12 px-4 py-16 sm:px-8 lg:grid-cols-12 lg:py-24">
+        <div className="relative mx-auto grid w-full max-w-[90rem] items-center gap-10 px-4 py-10 sm:px-8 lg:grid-cols-12 lg:py-12">
           <div className="lg:col-span-7">
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="mb-5 inline-block rounded-full border-2 border-foreground bg-background px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest"
+              className="mb-3 inline-block rounded-full border-2 border-foreground bg-background px-4 py-1.5 font-heading text-xs font-bold uppercase tracking-widest"
             >
               🌿 100% natural · Aguacate Hass montañero
             </motion.span>
@@ -390,45 +416,52 @@ const HomeClient = ({ initialProducts = [] }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="font-display text-[clamp(3.5rem,9vw,6.5rem)] font-black leading-[0.88] tracking-tight text-foreground"
+              className="font-display text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-[0.9] tracking-tight text-foreground"
             >
               AMOLI
             </motion.p>
 
-            <p className="mt-3 font-display text-2xl font-black uppercase tracking-wide text-primary sm:text-3xl">
+            <p className="mt-2 font-display text-xl font-black uppercase tracking-wide text-primary sm:text-2xl">
               Guacamole real
             </p>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Elaborado mediante un proceso artesanal, fresco y responsable. Sin aditivos ni conservantes sintéticos — solo el mejor aguacate de nuestras montañas e ingredientes seleccionados.
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Nació de una pregunta simple: ¿por qué el guacamole refrigerado tenía que ser aburrido? AMOLI es la respuesta — sabor auténtico de aguacate, sin conservantes ni excusas, con una imagen que no pide permiso para destacar.
             </p>
 
-            <div className="mt-8 grid grid-cols-3 gap-3 max-w-lg">
-              <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                <Leaf className="mx-auto mb-1 h-5 w-5 text-lime-600" />
-                <span className="block font-heading text-xs font-bold uppercase">Sin Conservantes</span>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <span className="font-heading font-black uppercase tracking-widest text-foreground">Dónde encontrarnos: </span>
+              en la sección de refrigerados de todos los Vita Integral, junto a los dips y listos para consumir.
+            </p>
+
+            <div className="mt-4 grid grid-cols-2 gap-3 max-w-md">
+              <div className="aspect-square overflow-hidden rounded-xl border-2 border-foreground">
+                <img
+                  src="/images/amoli-limonudo-splash.png"
+                  alt="Frasco de guacamole AMOLI Limonudo con limones y aguacates"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                <ChefHat className="mx-auto mb-1 h-5 w-5 text-primary" />
-                <span className="block font-heading text-xs font-bold uppercase">Sabor Real</span>
-              </div>
-              <div className="rounded-xl border-2 border-foreground bg-card p-3 text-center">
-                <Mountain className="mx-auto mb-1 h-5 w-5 text-foreground" />
-                <span className="block font-heading text-xs font-bold uppercase">Origen Antioquia</span>
+              <div className="aspect-square overflow-hidden rounded-xl border-2 border-foreground">
+                <img
+                  src="/images/amoli-chips-dip.png"
+                  alt="Guacamole AMOLI servido con totopos"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
 
-            <div className="mt-9 flex flex-wrap gap-4">
+            <div className="mt-5 flex flex-wrap gap-3">
               <a
                 href="#producto-destacado"
                 onClick={(e) => scrollToSection(e, 'producto-destacado')}
-                className={`flex h-12 items-center gap-2 rounded-xl border-2 border-foreground bg-primary px-7 font-display text-base font-bold uppercase tracking-wide text-primary-foreground transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${HARD_SHADOW}`}
+                className={`flex h-11 items-center gap-2 rounded-xl border-2 border-foreground bg-primary px-6 font-display text-sm font-bold uppercase tracking-wide text-primary-foreground transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${HARD_SHADOW}`}
               >
-                <ShoppingCart size={18} /> Ver Productos
+                <ShoppingCart size={16} /> Ver Productos
               </a>
               <Link
                 href="/aliados"
-                className={`flex h-12 items-center rounded-xl border-2 border-foreground bg-accent px-7 font-display text-base font-bold uppercase tracking-wide text-foreground transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${HARD_SHADOW}`}
+                className={`flex h-11 items-center rounded-xl border-2 border-foreground bg-accent px-6 font-display text-sm font-bold uppercase tracking-wide text-foreground transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none ${HARD_SHADOW}`}
               >
                 Vende AMOLI
               </Link>
@@ -441,32 +474,62 @@ const HomeClient = ({ initialProducts = [] }) => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5"
           >
-            <div className={`rounded-3xl border-2 border-foreground bg-secondary p-6 sm:p-8 text-center ${HARD_SHADOW_LG}`}>
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                PRESENTACIÓN ESTÁNDAR
-              </span>
-
-              <div className="relative my-4 flex h-[280px] sm:h-[320px] items-center justify-center">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="col-span-2 aspect-[16/10] overflow-hidden rounded-2xl border-2 border-foreground">
                 <img
                   src="https://kkygujzfiiyvpjqbkkvg.supabase.co/storage/v1/object/public/product-images/products/amoligugacole.webp"
                   alt="Amoli Guacamole Artesanal"
-                  className="h-full max-h-[300px] object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105"
+                  className="h-full w-full object-cover"
                 />
               </div>
-
-              <div className="mb-4">
-                <span className="font-display text-4xl sm:text-5xl font-black text-foreground">AMOLI</span>
-                <span className="mt-1 block font-heading text-lg sm:text-xl font-bold uppercase tracking-wide text-primary">
-                  GUACAMOLE ARTESANAL
-                </span>
+              <div className="aspect-square overflow-hidden rounded-2xl border-2 border-foreground">
+                <img
+                  src="/images/amoli-tacos.png"
+                  alt="Tacos con guacamole AMOLI"
+                  className="h-full w-full object-cover"
+                />
               </div>
-
-              <div className="rounded-xl border-2 border-foreground bg-background p-4 flex justify-between items-center">
-                <span className="font-heading text-xs font-bold uppercase text-muted-foreground">Frasco de Vidrio</span>
-                <span className="font-mono font-extrabold text-lg text-foreground">450g CONT. NETO</span>
+              <div className="aspect-square overflow-hidden rounded-2xl border-2 border-foreground">
+                <img
+                  src="/images/amoli-burger.png"
+                  alt="Hamburguesa con guacamole AMOLI"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="border-b-2 border-foreground bg-secondary py-14">
+        <div className="mx-auto max-w-[90rem] px-4 sm:px-8">
+          <div className="mb-8 text-center">
+            <h2 className="font-display text-3xl font-black sm:text-4xl">ASÍ SE DISFRUTA</h2>
+            <p className="mt-2 text-sm text-muted-foreground">De la nevera a la mesa, en minutos.</p>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className={`aspect-[4/3] overflow-hidden rounded-2xl border-2 border-foreground ${HARD_SHADOW_SM}`}>
+              <img
+                src="/images/amoli-tacos.png"
+                alt="Tacos con guacamole AMOLI"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className={`aspect-[4/3] overflow-hidden rounded-2xl border-2 border-foreground ${HARD_SHADOW_SM}`}>
+              <img
+                src="/images/amoli-burger.png"
+                alt="Hamburguesa acompañada con guacamole AMOLI"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className={`aspect-[4/3] overflow-hidden rounded-2xl border-2 border-foreground ${HARD_SHADOW_SM}`}>
+              <img
+                src="/images/amoli-jar-chips-indoor.png"
+                alt="Frasco de guacamole AMOLI con totopos"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

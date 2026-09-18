@@ -22,15 +22,15 @@ const OrderSuccessClient = () => {
         <p className="mt-2 text-sm text-muted-foreground">Pedido #{orderId.slice(0, 8)}</p>
       )}
       <p className="mt-4 text-muted-foreground">
-        Registramos tu pedido con estado <strong>pendiente</strong>. Para confirmarlo y coordinar el pago,
-        escríbenos por WhatsApp con el resumen que ya preparamos.
+        Registramos tu pedido con estado <strong>pendiente</strong>. Para confirmarlo y programar la entrega,
+        envíanos por WhatsApp el resumen que ya preparamos junto con el <strong>pantallazo del comprobante</strong> de tu pago.
       </p>
 
       <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         {whatsappUrl && (
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="gap-2">
-              <MessageCircle size={18} /> Confirmar por WhatsApp
+              <MessageCircle size={18} /> Enviar comprobante por WhatsApp
             </Button>
           </a>
         )}
@@ -38,6 +38,11 @@ const OrderSuccessClient = () => {
           <Button size="lg" variant="outline">Seguir comprando</Button>
         </Link>
       </div>
+      {whatsappUrl && (
+        <p className="mt-3 text-xs text-muted-foreground">
+          Se abrirá WhatsApp con el resumen de tu pedido ya escrito: solo adjunta ahí la foto del comprobante y envía.
+        </p>
+      )}
     </div>
   );
 };

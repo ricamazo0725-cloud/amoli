@@ -31,7 +31,7 @@ function loadGoogleMapsScript(apiKey) {
 
     const script = document.createElement('script');
     script.id = GOOGLE_MAPS_SCRIPT_ID;
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places&language=es&region=CO`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places,geometry&language=es&region=CO`;
     script.async = true;
     script.defer = true;
     script.onload = () => resolve();

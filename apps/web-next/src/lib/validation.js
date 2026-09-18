@@ -78,10 +78,14 @@ export function validateCity(value) {
   return null;
 }
 
-/** @returns {string|null} */
+/**
+ * Se usa tanto en el checkout (dirección de entrega) como en el formulario
+ * de Aliados (dirección del punto de venta), por eso el mensaje es genérico.
+ * @returns {string|null}
+ */
 export function validateAddress(value) {
   const v = (value || '').trim();
-  if (!v) return 'La dirección de entrega es obligatoria.';
+  if (!v) return 'La dirección es obligatoria.';
   if (v.length < ADDRESS_MIN_LENGTH) return `Escribe la dirección completa (mínimo ${ADDRESS_MIN_LENGTH} caracteres).`;
   return null;
 }

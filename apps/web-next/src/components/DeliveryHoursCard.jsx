@@ -1,9 +1,15 @@
-// Tarjeta informativa de horario de entrega, para el checkout. Contenido
-// PLACEHOLDER (ver aviso en el chat) — hay que confirmarlo con el horario
-// real de AMOLI antes de dejarlo en producción; hoy el footer de
-// SiteChrome dice "Entrega 24-72 h", lo cual no calza con "mismo día" de
-// aquí abajo, así que hay que decidir cuál es la política real y dejar
-// las dos consistentes.
+// Tarjeta informativa de horario de entrega, para el checkout.
+//
+// Lógica real de reparto (confirmada 2026-09-18): dos cortes al día.
+//   - Pedidos de la noche anterior + la mañana → salen a reparto a las
+//     12:00 m. (mediodía).
+//   - Pedidos de la tarde + la noche → se entregan la mañana siguiente.
+// Solo aplica dentro de la zona sur del Valle de Aburrá hasta Laureles
+// (ver src/lib/deliveryZone.js); fuera de esa zona no se hacen entregas
+// a domicilio (ver el aviso en CheckoutClient.jsx).
+//
+// El footer de SiteChrome usa el mismo mensaje resumido ("Entrega el mismo
+// día o al siguiente") para que no quede inconsistente con este horario.
 import React from 'react';
 import { Clock } from 'lucide-react';
 
@@ -16,12 +22,15 @@ const DeliveryHoursCard = () => (
       <p className="mb-1 font-heading text-xs font-bold uppercase tracking-wide">Horario de entrega</p>
       <ul className="space-y-1 text-muted-foreground">
         <li>
-          <span className="font-semibold text-foreground">Lunes a sábado</span>, de 9:00 a. m. a 4:00 p. m.
+          Zona sur del Valle de Aburrá (hasta Laureles), <span className="font-semibold text-foreground">lunes a sábado</span>.
+        </li>
+        <li>
+          Pedidos de la <span className="font-semibold text-foreground">noche anterior y la mañana</span> salen a reparto a las <span className="font-semibold text-foreground">12:00 m.</span>
+        </li>
+        <li>
+          Pedidos de la <span className="font-semibold text-foreground">tarde y la noche</span> se entregan a la mañana siguiente.
         </li>
         <li>Domingos y festivos no realizamos entregas: tu pedido se despacha el siguiente día hábil.</li>
-        <li>
-          Pedidos hechos en la mañana dentro del <span className="font-semibold text-foreground">Valle de Aburrá</span> se entregan el mismo día.
-        </li>
       </ul>
     </div>
   </div>

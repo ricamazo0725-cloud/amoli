@@ -1,23 +1,27 @@
 'use client';
 
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Loader2, ArrowLeft, MapPin, Landmark, Banknote, CreditCard, Link2, Check } from 'lucide-react';
+import { Loader2, ArrowLeft, MapPin, Landmark, Check } from 'lucide-react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import { REGEXP_ONLY_DIGITS } from 'input-otp';
 import { useCart } from '@/hooks/useCart';
 import { useToast } from '@/hooks/use-toast';
 import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
 import { AddressMapPicker } from '@/components/AddressMapPicker';
 import DeliveryHoursCard from '@/components/DeliveryHoursCard';
+import { isInSameDayDeliveryZone } from '@/lib/deliveryZone';
 import { createManualOrder } from '@/api/orders';
+import { sendOtp, verifyOtp } from '@/api/otp';
 import { WHATSAPP_NUMBER } from '@/lib/contact';
 import { formatCOP, getProductsByIds } from '@/api/products';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp';
 import {
   Select,
   SelectContent,
@@ -37,40 +41,33 @@ import {
   sanitizePhone,
 } from '@/lib/validation';
 
-const emptyCustomer = { name: '', phone: '', email: '', city: '', address: '', notes: '', paymentMethod: '' };
+const emptyCustomer = { name: '', phone: '', email: '', city: '', address: '', notes: '', paymentMethod: 'transferencia' };
 
-// PLACEHOLDER: confirmar cuáles de estos métodos ofrece AMOLI realmente y en
-// qué zonas — por ahora replica el patrón visto en un sitio de referencia
-// (transferencia con datos enviados por WhatsApp tras verificar el pedido,
-// efectivo y datáfono solo en Medellín/Área Metropolitana, link de pago para
-// el resto del país o el exterior).
+// Domicilio fijo por ahora ($10.000 para todos los pedidos). A futuro habrá
+// clientes frecuentes/validados (por número o cédula) a quienes no se les
+// cobre domicilio — cuando esa lógica esté definida, este valor pasa a
+// depender del cliente en vez de ser una constante fija.
+const DELIVERY_FEE = 10000;
+
+// Único método de pago habilitado por ahora: transferencia bancaria,
+// coordinada por WhatsApp tras verificar el pedido.
 const PAYMENT_METHODS = [
   {
     id: 'transferencia',
     label: 'Transferencia bancaria',
     icon: Landmark,
     scope: 'Válido para toda Colombia',
-    note: 'Cuando tu pedido sea verificado, te enviaremos la información de pago por WhatsApp. Por favor no hagas el pago antes de recibir la confirmación.',
-  },
-  {
-    id: 'efectivo',
-    label: 'Efectivo',
-    icon: Banknote,
-    scope: 'Solo para Medellín y Área Metropolitana',
-  },
-  {
-    id: 'datafono',
-    label: 'Datáfono (tarjeta débito o crédito)',
-    icon: CreditCard,
-    scope: 'Solo para Medellín y Área Metropolitana',
-  },
-  {
-    id: 'link_pago',
-    label: 'Link de pago (tarjeta de crédito)',
-    icon: Link2,
-    scope: 'Válido para pagos nacionales o desde el exterior',
+    note: 'Escanea el código QR para pagar el total del pedido (incluye domicilio). Guarda el pantallazo del comprobante: en el siguiente paso te damos un botón para enviarlo por WhatsApp y así confirmamos tu pago y programamos la entrega.',
   },
 ];
+
+const OTP_RESEND_COOLDOWN_SECONDS = 60;
+
+// El envío de OTP por WhatsApp está caído del lado del proveedor ("El envío
+// de códigos no está disponible en este momento"). Mientras se soluciona,
+// se oculta el paso de verificación y no se exige para completar el pedido.
+// Para reactivarlo cuando vuelva a funcionar, solo hay que poner esto en true.
+const WHATSAPP_OTP_ENABLED = false;
 
 function validatePaymentMethod(value) {
   return value ? null : 'Selecciona un método de pago.';
@@ -80,11 +77,85 @@ const CheckoutClient = () => {
   const { cartItems, getCartTotal, getCartTotalValue, clearCart, removeFromCart } = useCart();
   const { toast } = useToast();
   const router = useRouter();
+  // Total a pagar = subtotal del carrito + domicilio fijo (ver DELIVERY_FEE).
+  const orderTotal = getCartTotalValue() + DELIVERY_FEE;
   const [customer, setCustomer] = useState(emptyCustomer);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [submitting, setSubmitting] = useState(false);
   const [coords, setCoords] = useState(null);
+  // true/false una vez ubicado el punto, null mientras no hay coords o la
+  // librería "geometry" de Maps todavía no cargó. Solo informa al cliente
+  // sobre el mismo día — no bloquea el pedido (se envía a toda Colombia).
+  const [inSameDayZone, setInSameDayZone] = useState(null);
+
+  // Verificación de WhatsApp: 'idle' -> 'sent' -> 'verified'. otpPhone guarda
+  // a qué número corresponde el paso actual, para poder invalidar todo si el
+  // usuario cambia el teléfono después de haber pedido/confirmado el código.
+  const [otpStep, setOtpStep] = useState('idle');
+  const [otpPhone, setOtpPhone] = useState('');
+  const [otpCode, setOtpCode] = useState('');
+  const [otpSending, setOtpSending] = useState(false);
+  const [otpVerifying, setOtpVerifying] = useState(false);
+  const [otpError, setOtpError] = useState('');
+  const [resendCooldown, setResendCooldown] = useState(0);
+
+  useEffect(() => {
+    if (resendCooldown <= 0) return undefined;
+    const timer = setInterval(() => setResendCooldown((s) => Math.max(0, s - 1)), 1000);
+    return () => clearInterval(timer);
+  }, [resendCooldown]);
+
+  const phoneIsVerified = !WHATSAPP_OTP_ENABLED || (otpStep === 'verified' && otpPhone === customer.phone);
+
+  const resetOtpIfPhoneChanged = (newPhone) => {
+    if (otpStep !== 'idle' && newPhone !== otpPhone) {
+      setOtpStep('idle');
+      setOtpCode('');
+      setOtpError('');
+    }
+  };
+
+  const handleSendOtp = async () => {
+    const phoneError = validatePhone(customer.phone);
+    if (phoneError) {
+      setTouched((t) => ({ ...t, phone: true }));
+      runFieldValidation('phone', customer.phone);
+      return;
+    }
+    setOtpError('');
+    setOtpSending(true);
+    try {
+      await sendOtp(customer.phone);
+      setOtpPhone(customer.phone);
+      setOtpStep('sent');
+      setOtpCode('');
+      setResendCooldown(OTP_RESEND_COOLDOWN_SECONDS);
+      toast({ title: 'Código enviado', description: `Te enviamos un código por WhatsApp al ${customer.phone}.` });
+    } catch (error) {
+      setOtpError(error.message);
+    } finally {
+      setOtpSending(false);
+    }
+  };
+
+  const handleVerifyOtp = async () => {
+    if (!/^\d{6}$/.test(otpCode)) {
+      setOtpError('Ingresa el código de 6 dígitos.');
+      return;
+    }
+    setOtpError('');
+    setOtpVerifying(true);
+    try {
+      await verifyOtp(otpPhone, otpCode);
+      setOtpStep('verified');
+      toast({ title: 'Número verificado por WhatsApp' });
+    } catch (error) {
+      setOtpError(error.message);
+    } finally {
+      setOtpVerifying(false);
+    }
+  };
 
   const handleChange = (field) => (e) => setCustomer((c) => ({ ...c, [field]: e.target.value }));
   const handleBlur = (field) => () => setTouched((t) => ({ ...t, [field]: true }));
@@ -102,7 +173,10 @@ const CheckoutClient = () => {
 
       const location = place.geometry?.location;
       if (location) {
-        setCoords({ lat: location.lat(), lng: location.lng() });
+        const lat = location.lat();
+        const lng = location.lng();
+        setCoords({ lat, lng });
+        setInSameDayZone(isInSameDayDeliveryZone(lat, lng));
       }
 
       const detectedCity = getCityFromPlace(place);
@@ -161,11 +235,13 @@ const CheckoutClient = () => {
         (item) => `• ${item.quantity} x ${item.product.title} — ${formatCOP((item.product.sale_price ?? item.product.price) * item.quantity)}`
       ),
       `Subtotal: ${formatCOP(getCartTotalValue())}`,
-      'Domicilio: se confirma según tu zona',
+      `Domicilio: ${formatCOP(DELIVERY_FEE)}`,
+      `Total a pagar: ${formatCOP(orderTotal)}`,
       `Nombre: ${customer.name}`,
       customer.city ? `Ciudad: ${customer.city}` : null,
       finalAddress ? `Dirección: ${finalAddress}` : null,
       paymentLabel ? `Método de pago: ${paymentLabel}` : null,
+      'Adjunto el pantallazo del comprobante de la transferencia 👇',
     ].filter(Boolean);
     return encodeURIComponent(lines.join('\n'));
   };
@@ -178,6 +254,14 @@ const CheckoutClient = () => {
     }
     if (!validateAll()) {
       toast({ variant: 'destructive', title: 'Revisa los datos', description: 'Hay campos que necesitan corrección.' });
+      return;
+    }
+    if (!phoneIsVerified) {
+      toast({
+        variant: 'destructive',
+        title: 'Verifica tu WhatsApp',
+        description: 'Confirma el código que te enviamos por WhatsApp antes de completar el pedido.',
+      });
       return;
     }
 
@@ -223,7 +307,7 @@ const CheckoutClient = () => {
           unitPrice: item.product.sale_price ?? item.product.price,
           quantity: item.quantity,
         })),
-        total: getCartTotalValue(),
+        total: orderTotal,
       });
 
       const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${buildWhatsappMessage(order)}`;
@@ -281,16 +365,13 @@ const CheckoutClient = () => {
           </div>
           <div className="flex justify-between text-muted-foreground">
             <span>Domicilio</span>
-            <span>Se confirma según tu zona</span>
+            <span>{formatCOP(DELIVERY_FEE)}</span>
           </div>
         </div>
         <div className="mt-2 flex justify-between border-t border-border pt-4 text-lg font-bold">
           <span>Total</span>
-          <span className="text-primary">{getCartTotal()}</span>
+          <span className="text-primary">{formatCOP(orderTotal)}</span>
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">
-          * El valor del domicilio se confirma por WhatsApp según tu dirección — no está incluido en este total todavía.
-        </p>
       </div>
 
       <div className="mb-8">
@@ -329,6 +410,7 @@ const CheckoutClient = () => {
               onChange={(value) => {
                 setCustomer((c) => ({ ...c, phone: value || '' }));
                 if (touched.phone) runFieldValidation('phone', value || '');
+                resetOtpIfPhoneChanged(value || '');
               }}
               onBlur={() => {
                 handleBlur('phone')();
@@ -337,6 +419,60 @@ const CheckoutClient = () => {
               className={`phone-input-wrapper ${touched.phone && errors.phone ? 'phone-input-error' : ''}`}
             />
             {touched.phone && errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
+
+            {WHATSAPP_OTP_ENABLED && (
+              <div className="pt-1">
+                {otpStep !== 'verified' && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={handleSendOtp}
+                    disabled={otpSending || resendCooldown > 0 || !customer.phone || !!validatePhone(customer.phone)}
+                  >
+                    {otpSending ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : otpStep === 'sent' ? (
+                      resendCooldown > 0 ? `Reenviar código (${resendCooldown}s)` : 'Reenviar código'
+                    ) : (
+                      'Enviar código por WhatsApp'
+                    )}
+                  </Button>
+                )}
+
+                {otpStep === 'sent' && (
+                  <div className="mt-3 space-y-2">
+                    <Label htmlFor="otp">Código de verificación *</Label>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <InputOTP id="otp" maxLength={6} pattern={REGEXP_ONLY_DIGITS} value={otpCode} onChange={setOtpCode}>
+                        <InputOTPGroup>
+                          <InputOTPSlot index={0} />
+                          <InputOTPSlot index={1} />
+                          <InputOTPSlot index={2} />
+                          <InputOTPSlot index={3} />
+                          <InputOTPSlot index={4} />
+                          <InputOTPSlot index={5} />
+                        </InputOTPGroup>
+                      </InputOTP>
+                      <Button type="button" size="sm" onClick={handleVerifyOtp} disabled={otpVerifying || otpCode.length !== 6}>
+                        {otpVerifying ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Verificar'}
+                      </Button>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Te enviamos un código de 6 dígitos por WhatsApp al {otpPhone}.
+                    </p>
+                  </div>
+                )}
+
+                {otpStep === 'verified' && (
+                  <p className="flex items-center gap-1.5 text-sm text-green-600">
+                    <Check size={16} /> Número verificado por WhatsApp
+                  </p>
+                )}
+
+                {otpError && <p className="mt-1 text-xs text-destructive">{otpError}</p>}
+              </div>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -414,12 +550,25 @@ const CheckoutClient = () => {
               lng={coords.lng}
               onPinMove={({ lat, lng, address }) => {
                 setCoords({ lat, lng });
+                setInSameDayZone(isInSameDayDeliveryZone(lat, lng));
                 if (address) {
                   if (addressInputRef.current) addressInputRef.current.value = address;
                   setCustomer((c) => ({ ...c, address }));
                 }
               }}
             />
+          )}
+          {coords && inSameDayZone !== null && (
+            inSameDayZone ? (
+              <p className="flex items-center gap-1.5 text-xs font-medium text-lime-700">
+                <Check className="h-3.5 w-3.5 shrink-0" />
+                Tu dirección está dentro de la zona de entrega el mismo día.
+              </p>
+            ) : (
+              <p className="text-xs text-muted-foreground">
+                No hacemos entregas a domicilio fuera de la zona sur hasta Laureles. Puedes conseguir AMOLI en tiendas Vita Integral cerca de ti.
+              </p>
+            )
           )}
         </div>
 
@@ -446,56 +595,41 @@ const CheckoutClient = () => {
         </div>
 
         <div className="space-y-2 border-t border-border pt-4">
-          <h2 className="font-display font-bold">Método de pago *</h2>
+          <h2 className="font-display font-bold">Método de pago</h2>
           <p className="text-xs text-muted-foreground">Todas las transacciones son seguras y encriptadas.</p>
 
-          <div className="space-y-3 pt-2">
-            {PAYMENT_METHODS.map((method) => {
-              const Icon = method.icon;
-              const selected = customer.paymentMethod === method.id;
-              return (
-                <div key={method.id}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setCustomer((c2) => ({ ...c2, paymentMethod: method.id }));
-                      runFieldValidation('paymentMethod', method.id);
-                      setTouched((t) => ({ ...t, paymentMethod: true }));
-                    }}
-                    className={`flex w-full items-center gap-3 rounded-xl border-2 p-4 text-left transition ${
-                      selected ? 'border-primary bg-secondary' : 'border-border bg-background hover:border-foreground/40'
-                    }`}
-                  >
-                    <span
-                      className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 ${
-                        selected ? 'border-primary bg-primary' : 'border-muted-foreground'
-                      }`}
-                    >
-                      {selected && <Check size={12} className="text-primary-foreground" />}
-                    </span>
-                    <Icon size={18} className="shrink-0 text-muted-foreground" />
-                    <span className="text-sm">
-                      <span className="font-semibold">{method.label}</span>{' '}
-                      <span className="text-muted-foreground">({method.scope})</span>
-                    </span>
-                  </button>
-                  {selected && method.note && (
-                    <p className="mt-2 rounded-lg border border-border bg-secondary/60 p-3 text-xs text-muted-foreground">
-                      {method.note}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
+          <div className="flex items-start gap-3 rounded-xl border-2 border-primary bg-secondary p-4">
+            <Landmark size={18} className="mt-0.5 shrink-0 text-muted-foreground" />
+            <div className="text-sm">
+              <p>
+                <span className="font-semibold">{PAYMENT_METHODS[0].label}</span>{' '}
+                <span className="text-muted-foreground">({PAYMENT_METHODS[0].scope})</span>
+              </p>
+              <p className="mt-2 rounded-lg border border-border bg-background/60 p-3 text-xs text-muted-foreground">
+                {PAYMENT_METHODS[0].note}
+              </p>
+              <div className="mt-3 flex flex-col items-center gap-2 rounded-lg border border-border bg-background/60 p-3">
+                <img
+                  src="/images/qr-pago-bancolombia.jpg"
+                  alt="Código QR Bre-B Bancolombia para pagar por transferencia (llave @sosa30502)"
+                  className="h-48 w-48 rounded-md border border-border object-contain bg-white"
+                />
+                <p className="text-center text-xs text-muted-foreground">
+                  Escanea y transfiere <span className="font-semibold text-foreground">{formatCOP(orderTotal)}</span> (incluye domicilio).
+                </p>
+              </div>
+            </div>
           </div>
-          {touched.paymentMethod && errors.paymentMethod && (
-            <p className="text-xs text-destructive">{errors.paymentMethod}</p>
-          )}
         </div>
 
-        <Button type="submit" size="lg" className="w-full" disabled={submitting}>
+        <Button type="submit" size="lg" className="w-full" disabled={submitting || !phoneIsVerified}>
           {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Confirmar pedido'}
         </Button>
+        {!phoneIsVerified && (
+          <p className="text-center text-xs text-muted-foreground">
+            Verifica tu WhatsApp arriba para poder confirmar el pedido.
+          </p>
+        )}
       </form>
     </div>
   );

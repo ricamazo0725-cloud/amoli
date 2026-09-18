@@ -142,7 +142,7 @@ const SiteChrome = ({ children }) => {
             <p className="font-display text-lg font-bold text-background">Envíos y pagos</p>
             <ul className="mt-3 space-y-2">
               <li>Envío refrigerado</li>
-              <li>Entrega 24-72 h</li>
+              <li>Entrega el mismo día o al siguiente</li>
               <li>Transferencia bancaria</li>
             </ul>
           </div>

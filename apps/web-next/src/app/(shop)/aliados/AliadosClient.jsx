@@ -8,9 +8,9 @@
 // asi el aliado potencial habla directo con AMOLI por el canal que ya usa
 // a diario, sin prometer un plazo de respuesta fijo.
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
-import { Store, Package, TrendingUp, Megaphone, MessageCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { MessageCircle, CheckCircle2, ArrowLeft } from 'lucide-react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { Button } from '@/components/ui/button';
@@ -25,6 +25,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { usePlacesAutocomplete, getCityFromPlace } from '@/hooks/usePlacesAutocomplete';
 import { WHATSAPP_NUMBER } from '@/lib/contact';
 import {
   CITY_OPTIONS,
@@ -42,26 +43,24 @@ const HARD_SHADOW = 'shadow-[6px_6px_0px_0px_rgba(42,42,42,1)]';
 const HARD_SHADOW_SM = 'shadow-[3px_3px_0px_0px_rgba(42,42,42,1)]';
 const BUSINESS_TYPES = ['Minimercado', 'Tienda saludable', 'Fruver', 'Otro'];
 
+// Fotos placeholder tomadas de las que ya existen en /public/images (una
+// distinta por tarjeta, sin repetir ninguna). Cuando haya fotos reales para
+// cada beneficio, solo hay que cambiar el valor de "image" de cada item.
 const BENEFITS = [
   {
-    icon: Store,
+    image: '/images/amoli-jar-chips-indoor.png',
     title: 'Un producto que se vende solo',
     text: 'Receta artesanal, ingredientes reales y una marca que ya reconocen tus clientes.',
   },
   {
-    icon: Package,
+    image: '/images/amoli-chips-dip.png',
     title: 'Fácil de tener en tienda',
     text: 'Empaque pensado para nevera, buena vida útil y reposición sencilla — sin sorpresas.',
   },
   {
-    icon: TrendingUp,
-    title: 'Buen margen para ti',
-    text: 'Precios y condiciones pensadas para que valga la pena el espacio en tu nevera.',
-  },
-  {
-    icon: Megaphone,
+    image: '/images/amoli-rooftop-dinner.png',
     title: 'Te acompañamos con estrategias digitales',
-    text: 'Flujos y estrategias digitales pensadas para impulsar tus ventas, más material para exhibir el producto y un canal directo con nosotros si algo se ofrece.',
+    text: 'Flujos y estrategias digitales pensadas para impulsar tus ventas, y un canal directo con nosotros si algo se ofrece.',
   },
 ];
 
@@ -119,6 +118,34 @@ const AliadosClient = () => {
     const message = validators[field](value);
     setErrors((prev) => ({ ...prev, [field]: message || undefined }));
   };
+
+  // Autocompletado de dirección con Google Places, igual que en el checkout
+  // ("el pedido"): mientras el aliado escribe su punto de venta, sugiere
+  // direcciones reales y, al elegir una, intenta detectar la ciudad.
+  const addressInputRef = useRef(null);
+  const { loadError: mapsLoadError } = usePlacesAutocomplete(addressInputRef, {
+    onPlaceSelected: (place) => {
+      const addressVal = place.formatted_address || '';
+      if (addressInputRef.current) {
+        addressInputRef.current.value = addressVal;
+      }
+      setForm((f) => ({ ...f, address: addressVal }));
+      setTouched((t) => ({ ...t, address: true }));
+      runFieldValidation('address', addressVal);
+
+      const detectedCity = getCityFromPlace(place);
+      if (detectedCity) {
+        const normalizeText = (str) =>
+          str.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+        const match = CITY_OPTIONS.find((opt) => normalizeText(opt) === normalizeText(detectedCity));
+        if (match) {
+          setForm((f) => ({ ...f, city: match }));
+          setTouched((t) => ({ ...t, city: true }));
+          runFieldValidation('city', match);
+        }
+      }
+    },
+  });
 
   const validateAll = () => {
     const nextErrors = {};
@@ -189,9 +216,45 @@ const AliadosClient = () => {
               Quiero ser aliado
             </a>
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Sin costo por aplicar · Escríbenos por WhatsApp y cuéntanos dónde queda tu tienda
+              Escríbenos por WhatsApp y cuéntanos dónde queda tu tienda
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* PARA LA CADENA */}
+      <section className="border-b-2 border-foreground">
+        <div className="mx-auto max-w-[90rem] px-4 py-16 sm:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="lg:col-span-6">
+              <span className="mb-3 inline-block font-heading text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                Para la cadena
+              </span>
+              <h2 className="font-display text-3xl font-black tracking-tight sm:text-4xl">
+                Un producto que se entiende en segundos.
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+                AMOLI convierte el guacamole en un producto con identidad propia dentro de refrigerados.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                Para el consumidor: sabor conocido, dos perfiles de intensidad y formato de 450 g para compartir, acompañar o resolver comidas rápidas.
+              </p>
+            </div>
+            <div className="lg:col-span-6">
+              <div className={`overflow-hidden rounded-2xl border-2 border-foreground ${HARD_SHADOW_SM}`}>
+                <img
+                  src="/images/hero-amoli-jars.jpg"
+                  alt="Frascos de guacamole AMOLI sobre aguacates frescos"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t-2 border-foreground bg-secondary py-6">
+          <p className="mx-auto max-w-[90rem] px-4 text-center font-display text-2xl font-black uppercase tracking-tight sm:text-3xl">
+            Una referencia fresca, visible y fácil de explicar.
+          </p>
         </div>
       </section>
 
@@ -200,17 +263,19 @@ const AliadosClient = () => {
         <h2 className="text-center font-display text-2xl font-black uppercase tracking-tight sm:text-3xl">
           Por qué las tiendas venden AMOLI
         </h2>
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {BENEFITS.map(({ icon: Icon, title, text }) => (
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {BENEFITS.map(({ image, title, text }) => (
             <div
               key={title}
-              className={`rounded-2xl border-2 border-foreground bg-card p-6 ${HARD_SHADOW_SM}`}
+              className={`overflow-hidden rounded-2xl border-2 border-foreground bg-card ${HARD_SHADOW_SM}`}
             >
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border-2 border-foreground bg-accent">
-                <Icon size={20} className="text-foreground" />
+              <div className="h-40 w-full overflow-hidden border-b-2 border-foreground">
+                <img src={image} alt={title} className="h-full w-full object-cover" />
               </div>
-              <h3 className="font-heading text-base font-bold">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+              <div className="p-6">
+                <h3 className="font-heading text-base font-bold">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{text}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -386,7 +451,8 @@ const AliadosClient = () => {
                 <Label htmlFor="address">Dirección del punto de venta *</Label>
                 <Input
                   id="address"
-                  value={form.address}
+                  ref={addressInputRef}
+                  defaultValue={form.address}
                   onChange={(e) => {
                     handleChange('address')(e);
                     if (touched.address) runFieldValidation('address', e.target.value);
@@ -395,6 +461,11 @@ const AliadosClient = () => {
                   aria-invalid={!!errors.address}
                 />
                 {touched.address && errors.address && <p className="text-xs text-destructive">{errors.address}</p>}
+                {mapsLoadError && (
+                  <p className="text-xs text-muted-foreground">
+                    Escribe la dirección manualmente (el autocompletado no está disponible ahora).
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
